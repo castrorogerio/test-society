@@ -71,29 +71,29 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/banner.png')" }}
+        style={{ backgroundImage: "url('/lovable-uploads/b12bb98f-7ade-455b-b076-9f8491cdeb10.png')" }}
       >
-        <div className="absolute inset-0 hero-overlay"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
         <Header />
-        <div className="container mx-auto px-4 z-10 text-center">
-          <h1 className="text-[#f4a82e] text-4xl md:text-6xl font-bold mb-4 font-montserrat">TEST SOCIETY 2025</h1>
-          <p className="text-white text-xl md:text-2xl mb-6">QUALITY ASSURANCE CONFERENCE</p>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
-            <div className="flex items-center text-white">
-              <span className="text-amber-DEFAULT mr-2">🗓️</span>
+        <div className="container mx-auto px-4 z-10 text-center mt-24">
+          <h1 className="text-[#f4a82e] text-5xl md:text-7xl font-bold mb-4 font-montserrat tracking-wider">TEST SOCIETY 2025</h1>
+          <p className="text-white text-xl md:text-3xl mb-10">QUALITY ASSURANCE CONFERENCE</p>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10 mb-12">
+            <div className="flex items-center text-white text-xl">
+              <span className="text-[#f4a82e] mr-2">🗓️</span>
               <span>October 10th 2025</span>
             </div>
-            <div className="flex items-center text-white">
-              <span className="text-amber-DEFAULT mr-2">👥</span>
-              <span>+5 Speakers</span>
+            <div className="flex items-center text-white text-xl">
+              <span className="text-[#f4a82e] mr-2">👥</span>
+              <span>6 Speakers</span>
             </div>
-            <div className="flex items-center text-white">
-              <span className="text-amber-DEFAULT mr-2">📍</span>
+            <div className="flex items-center text-white text-xl">
+              <span className="text-[#f4a82e] mr-2">📍</span>
               <span>Lisbon, Portugal</span>
             </div>
           </div>
           <Button 
-            className="bg-amber-DEFAULT hover:bg-amber-dark text-black text-lg px-8 py-6" 
+            className="bg-teal-700 hover:bg-teal-800 text-white text-lg px-10 py-6 mt-6 uppercase tracking-wide font-bold" 
             size="lg"
             asChild
           >
