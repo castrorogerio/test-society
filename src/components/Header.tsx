@@ -9,7 +9,7 @@ const Header = () => {
     <header className="absolute top-0 left-0 right-0 z-10">
       <div className="container mx-auto px-4 py-6 flex items-center justify-between">
         <div className="flex items-center">
-          <span className="text-amber-DEFAULT font-bold text-xl">TEST SOCIETY 2025</span>
+          <span className="text-[#f4a82e] font-bold text-xl font-montserrat">TEST SOCIETY 2025</span>
         </div>
 
         {/* Desktop Navigation */}

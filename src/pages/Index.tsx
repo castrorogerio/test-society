@@ -76,7 +76,7 @@ const Index = () => {
         <div className="absolute inset-0 hero-overlay"></div>
         <Header />
         <div className="container mx-auto px-4 z-10 text-center">
-          <h1 className="text-amber-DEFAULT text-4xl md:text-6xl font-bold mb-4">TEST SOCIETY 2025</h1>
+          <h1 className="text-[#f4a82e] text-4xl md:text-6xl font-bold mb-4 font-montserrat">TEST SOCIETY 2025</h1>
           <p className="text-white text-xl md:text-2xl mb-6">QUALITY ASSURANCE CONFERENCE</p>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
             <div className="flex items-center text-white">

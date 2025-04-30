@@ -85,6 +85,10 @@
   }
 }
 
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .tram-gradient {
   background: linear-gradient(180deg, #1A1A1A 0%, #333333 100%);
 }
