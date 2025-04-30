@@ -71,7 +71,7 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/lovable-uploads/61419109-344e-4865-a338-eb069aca0bd2.png')" }}
+        style={{ backgroundImage: "url('/images/banner.png')" }}
       >
         <div className="absolute inset-0 hero-overlay"></div>
         <Header />
