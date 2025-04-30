@@ -7,16 +7,17 @@ interface SpeakerProps {
 
 const Speaker = ({ name, role, image }: SpeakerProps) => {
   return (
-    <div className="group">
-      <div className="overflow-hidden rounded-lg mb-4">
+    <div className="group card-hover">
+      <div className="overflow-hidden rounded-xl mb-4 relative">
+        <div className="absolute inset-0 bg-gradient-to-t from-neutral-darker to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-10"></div>
         <img 
           src={image} 
           alt={name} 
-          className="w-full h-72 object-cover object-center transform transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-80 object-cover object-center transform transition-transform duration-500 group-hover:scale-110"
         />
       </div>
-      <h3 className="text-xl font-semibold text-white">{name}</h3>
-      <p className="text-amber-DEFAULT">{role}</p>
+      <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-tram transition-colors duration-300">{name}</h3>
+      <p className="text-tram-DEFAULT font-medium">{role}</p>
     </div>
   );
 };

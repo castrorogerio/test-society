@@ -54,13 +54,19 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				amber: {
-					DEFAULT: '#F39C12',
-					light: '#FFCA7A',
-					dark: '#D68100'
+					DEFAULT: '#FFCA28',
+					light: '#FFE082',
+					dark: '#FFA000'
 				},
-				teal: {
-					DEFAULT: '#4CA1AF',
-					dark: '#2C3E50'
+				tram: {
+					DEFAULT: '#FFD02C',
+					dark: '#1A1A1A'
+				},
+				neutral: {
+					DEFAULT: '#8E9196',
+					dark: '#222222',
+					darker: '#121212',
+					light: '#F5F5F5'
 				}
 			},
 			borderRadius: {
@@ -84,14 +90,37 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out'
 			},
 			backgroundImage: {
-				'hero-pattern': "url('/lovable-uploads/61419109-344e-4865-a338-eb069aca0bd2.png')"
+				'hero-pattern': "url('/lovable-uploads/0ae92d3d-0a49-4d33-9e92-a87c1a03a837.png')",
+				'gradient-dark': 'linear-gradient(180deg, #1A1A1A 0%, #333333 100%)'
 			}
 		}
 	},

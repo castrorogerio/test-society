@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 35 90% 51%;
+    --primary: 45 100% 58%;
     --primary-foreground: 0 0% 0%;
 
     --secondary: 210 40% 96.1%;
@@ -35,7 +35,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 
   .dark {
@@ -48,8 +48,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 35 90% 51%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 45 100% 58%;
+    --primary-foreground: 0 0% 0%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -76,34 +76,90 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold;
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
-.teal-gradient {
-  background: linear-gradient(180deg, #2C3E50 0%, #4CA1AF 100%);
+.tram-gradient {
+  background: linear-gradient(180deg, #1A1A1A 0%, #333333 100%);
 }
 
-.orange-bg {
-  background-color: #F39C12;
+.tram-yellow {
+  background-color: #FFD02C;
 }
 
 .black-bg {
-  background-color: #000000;
+  background-color: #121212;
 }
 
 .section-padding {
-  @apply py-16 md:py-24 px-4 md:px-8 lg:px-16;
+  @apply py-20 md:py-28 px-4 md:px-8 lg:px-16;
 }
 
 .hero-overlay {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 
 .stat-counter {
-  @apply text-4xl md:text-5xl font-bold;
+  @apply text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-tram to-amber-light;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+}
+
+.glass-card {
+  @apply backdrop-blur-sm bg-white/5 border border-white/10 rounded-lg;
+}
+
+/* Modern animations */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD02C;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFA000;
 }
