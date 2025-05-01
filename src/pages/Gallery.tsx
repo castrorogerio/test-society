@@ -57,7 +57,7 @@ const Gallery = () => {
         {/* Hero Section */}
         <section className="relative py-32">
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
-          <div className="absolute inset-0 bg-[url('/gallery/hero.jpg')] bg-cover bg-center"></div>
+          <div className="absolute inset-0 bg-[url('./gallery/hero.jpg')] bg-cover bg-center"></div>
           <div className="container mx-auto px-4 relative z-10">
             <SectionHeading
               title="Event Gallery"
