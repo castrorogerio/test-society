@@ -1,23 +1,23 @@
-
 interface SpeakerProps {
   name: string;
   role: string;
+  topic: string;
   image: string;
 }
 
-const Speaker = ({ name, role, image }: SpeakerProps) => {
+const Speaker = ({ name, role, topic, image }: SpeakerProps) => {
   return (
-    <div className="group card-hover">
-      <div className="overflow-hidden rounded-xl mb-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-neutral-darker to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300 z-10"></div>
-        <img 
-          src={image} 
-          alt={name} 
-          className="w-full h-80 object-cover object-center transform transition-transform duration-500 group-hover:scale-110"
-        />
+    <div className="group card-hover relative overflow-hidden rounded-xl">
+      <img 
+        src={image} 
+        alt={name} 
+        className="w-full h-96 object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-black/80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out p-6 flex flex-col justify-end">
+        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-3xl transition-all duration-300">{name}</h3>
+        <p className="text-[#f4a82e] font-semibold mb-2 group-hover:text-lg transition-all duration-300">{role}</p>
+        <p className="text-white text-base group-hover:text-lg transition-all duration-300">{topic}</p>
       </div>
-      <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-tram transition-colors duration-300">{name}</h3>
-      <p className="text-tram-DEFAULT font-medium">{role}</p>
     </div>
   );
 };

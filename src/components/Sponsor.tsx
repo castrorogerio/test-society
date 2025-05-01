@@ -1,30 +1,27 @@
-
 interface SponsorProps {
   name: string;
   logo: string;
-  tier: 'platinum' | 'gold' | 'silver';
+  tier: 'platinum' | 'gold' | 'silver' | 'community';
 }
 
 const Sponsor = ({ name, logo, tier }: SponsorProps) => {
   const sizeClass = {
-    platinum: 'h-20 md:h-28',
-    gold: 'h-16 md:h-24',
-    silver: 'h-12 md:h-20'
-  }[tier];
-
-  const hoverEffect = {
-    platinum: 'hover:shadow-[0_0_25px_rgba(255,208,44,0.5)]',
-    gold: 'hover:shadow-[0_0_20px_rgba(255,208,44,0.4)]',
-    silver: 'hover:shadow-[0_0_15px_rgba(255,208,44,0.3)]'
+    platinum: 'h-28 md:h-36',
+    gold: 'h-24 md:h-32',
+    silver: 'h-20 md:h-28',
+    community: 'h-16 md:h-24'
   }[tier];
 
   return (
-    <div className={`flex items-center justify-center p-6 rounded-lg transition-all duration-300 glass-card ${hoverEffect}`}>
-      <img 
-        src={logo} 
-        alt={name} 
-        className={`${sizeClass} object-contain opacity-80 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0`}
-      />
+    <div className="relative overflow-hidden rounded-2xl p-8">
+      <div className="relative flex flex-col items-center justify-center">
+        <img 
+          src={logo} 
+          alt={name} 
+          className={`${sizeClass} object-contain`}
+        />
+        <span className="mt-4 text-white/80 text-sm font-medium">{name}</span>
+      </div>
     </div>
   );
 };
