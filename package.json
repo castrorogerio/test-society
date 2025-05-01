@@ -1,7 +1,7 @@
 {
   "name": "test-society",
   "private": false,
-  "homepage": "https://castrorogerio.github.io/test-society",
+  "homepage": "https://castrorogerio.github.io/test-society/",
   "version": "0.1.0",
   "type": "module",
   "scripts": {
