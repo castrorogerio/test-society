@@ -29,11 +29,6 @@ const Header = () => {
     const targetId = e.currentTarget.getAttribute('href')?.substring(1);
     if (!targetId) return;
     
-    if (!isHomePage) {
-      window.location.href = `/#${targetId}`;
-      return;
-    }
-    
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       const headerHeight = document.querySelector('header')?.offsetHeight || 0;
