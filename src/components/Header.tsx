@@ -82,7 +82,7 @@ const Header = () => {
       <div className="w-full px-8 py-1 flex items-center justify-between">
         <div className="flex items-center ml-24">
           <Link to="/" className="focus:outline-none">
-            <img src="/images/Logo_Pequeno.png" alt="Test Society 2025" className="h-24 md:h-32" />
+            <img src="/images/Logo_Pequeno.png" alt="Test Society 2025" className="h-12 md:h-16" />
           </Link>
         </div>
 
