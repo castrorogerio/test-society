@@ -1,4 +1,3 @@
-
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -16,9 +15,8 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen black-bg flex flex-col">
-      <div 
-        className="relative h-64 bg-cover bg-center"
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-black">
+      <div className="relative h-64 bg-cover bg-center"
         style={{ backgroundImage: "url('/lovable-uploads/61419109-344e-4865-a338-eb069aca0bd2.png')" }}
       >
         <div className="absolute inset-0 hero-overlay"></div>

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -119,8 +118,8 @@ export default {
 				'slide-in': 'slide-in 0.5s ease-out'
 			},
 			backgroundImage: {
-				'hero-pattern': "url('/lovable-uploads/0ae92d3d-0a49-4d33-9e92-a87c1a03a837.png')",
-				'gradient-dark': 'linear-gradient(180deg, #1A1A1A 0%, #333333 100%)'
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			}
 		}
 	},
