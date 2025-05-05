@@ -24,20 +24,20 @@ const EventScheduleItem = ({ time, title, speaker, description, speakerImage, is
               <span className={`${isBreak ? 'text-[#f4a82e]' : 'text-[#f4a82e]'} font-semibold`}>{time}</span>
               <h3 className={`${isBreak ? 'text-base' : 'text-lg'} text-white font-bold group-hover:text-[#f4a82e] transition-colors duration-300`}>{title}</h3>
             </div>
-            {description && <p className="text-white/70 text-sm mb-2">{description}</p>}
+            {speaker && (
+              <div className="flex items-center gap-2 ml-12 mb-2">
+                {speakerImage && (
+                  <img 
+                    src={speakerImage} 
+                    alt={speaker} 
+                    className="w-8 h-8 rounded-full object-cover border-2 border-teal-800 group-hover:border-[#f4a82e] transition-colors duration-300"
+                  />
+                )}
+                <span className="text-[#f4a82e] font-medium">{speaker}</span>
+              </div>
+            )}
+            {description && <p className="text-white/70 text-sm mb-2 ml-12">{description}</p>}
           </div>
-          
-          {/* Speaker - Only show if speaker is provided */}
-          {speaker && speakerImage && (
-            <div className="flex items-center gap-2 bg-black/30 px-3 py-1.5 rounded-lg shrink-0 self-center">
-              <img 
-                src={speakerImage} 
-                alt={speaker} 
-                className="w-8 h-8 rounded-full object-cover border-2 border-teal-800 group-hover:border-[#f4a82e] transition-colors duration-300"
-              />
-              <span className="text-white text-sm font-medium">{speaker}</span>
-            </div>
-          )}
         </div>
       </div>
     </div>

@@ -55,10 +55,10 @@ const Gallery = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="relative py-32">
+        <section className="relative py-16 sm:py-24 md:py-32">
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
           <div className="absolute inset-0 bg-[url('./gallery/hero.jpg')] bg-cover bg-center"></div>
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeading
               title="Event Gallery"
               subtitle="Relive the moments from Test Society 2024"
@@ -69,24 +69,24 @@ const Gallery = () => {
         </section>
 
         {/* Gallery Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="py-12 sm:py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {galleryImages.map((image, index) => (
                 <div 
                   key={index} 
-                  className="group relative overflow-hidden rounded-xl cursor-pointer"
+                  className="group relative overflow-hidden rounded-lg sm:rounded-xl cursor-pointer"
                   onClick={() => openImageModal(image)}
                 >
                   {isLoading && (
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-12 w-12 border-4 border-[#f4a82e] border-t-transparent"></div>
+                      <div className="animate-spin rounded-full h-8 w-8 sm:h-12 sm:w-12 border-4 border-[#f4a82e] border-t-transparent"></div>
                     </div>
                   )}
                   <img 
                     src={image.thumbnail} 
                     alt="Gallery image"
-                    className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-48 sm:h-64 md:h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
                     onLoad={handleImageLoad}
                   />
@@ -100,12 +100,12 @@ const Gallery = () => {
         {/* Image Modal */}
         {selectedImage && (
           <div 
-            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-2 sm:p-4"
             onClick={closeImageModal}
           >
             <div className="relative max-w-4xl w-full">
               <button 
-                className="absolute top-4 right-4 text-white text-4xl hover:text-[#f4a82e] transition-colors"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white text-2xl sm:text-4xl hover:text-[#f4a82e] transition-colors"
                 onClick={closeImageModal}
               >
                 &times;
@@ -120,15 +120,15 @@ const Gallery = () => {
         )}
 
         {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-12 sm:py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <SectionHeading
               title="Join Us This Year"
               subtitle="Be part of Test Society 2025"
               textColor="text-[#f4a82e]"
             />
             <Button 
-              className="bg-teal-800 hover:bg-teal-700 text-white text-lg px-12 py-4 mt-8 uppercase tracking-wide font-bold rounded-md font-montserrat"
+              className="bg-teal-800 hover:bg-teal-700 text-white text-base sm:text-lg px-8 sm:px-12 py-3 sm:py-4 mt-6 sm:mt-8 uppercase tracking-wide font-bold rounded-md font-montserrat"
               size="lg"
               asChild
             >

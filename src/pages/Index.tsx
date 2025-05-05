@@ -20,117 +20,57 @@ const Index = () => {
   const speakers = [
     { 
       id: 1, 
-      name: "Alex Johnson", 
-      role: "Lead QA Engineer, Google", 
-      topic: "AI-Powered Testing: The Future of Quality Assurance",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
+      name: "TBD", 
+      role: "Speaker", 
+      topic: "To Be Announced",
+      image: "placeholder" 
     },
     { 
       id: 2, 
-      name: "Michael Brown", 
-      role: "Testing Director, Microsoft", 
-      topic: "Scaling Test Automation in Enterprise Environments",
-      image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
+      name: "TBD", 
+      role: "Speaker", 
+      topic: "To Be Announced",
+      image: "placeholder" 
     },
     { 
       id: 3, 
-      name: "Sarah Wilson", 
-      role: "QA Automation Expert, Amazon", 
-      topic: "Continuous Testing in DevOps Pipelines",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
+      name: "TBD", 
+      role: "Speaker", 
+      topic: "To Be Announced",
+      image: "placeholder" 
     },
     { 
       id: 4, 
-      name: "Emily Parker", 
-      role: "Test Strategy Consultant", 
-      topic: "Risk-Based Testing: A Strategic Approach",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
+      name: "TBD", 
+      role: "Speaker", 
+      topic: "To Be Announced",
+      image: "placeholder" 
     },
     { 
       id: 5, 
-      name: "David Chen", 
-      role: "DevOps Testing Specialist", 
-      topic: "Performance Testing in Cloud Environments",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
+      name: "TBD", 
+      role: "Speaker", 
+      topic: "To Be Announced",
+      image: "placeholder" 
     },
     { 
       id: 6, 
-      name: "Jessica Lee", 
-      role: "Security Testing Expert", 
-      topic: "Security Testing: Protecting Your Applications",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
+      name: "TBD", 
+      role: "Speaker", 
+      topic: "To Be Announced",
+      image: "placeholder" 
     }
   ];
 
   const sponsors: Sponsor[] = [
     {
       id: 1,
-      name: "TechCorp",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=TechCorp",
-      tier: "platinum"
-    },
-    {
-      id: 2,
-      name: "InnovateX",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=InnovateX",
-      tier: "platinum"
-    },
-    {
-      id: 3,
-      name: "FutureTech",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=FutureTech",
-      tier: "gold"
-    },
-    {
-      id: 4,
-      name: "Digital Solutions",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=Digital+Solutions",
-      tier: "gold"
-    },
-    {
-      id: 5,
-      name: "WebCraft",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=WebCraft",
-      tier: "gold"
-    },
-    {
-      id: 6,
-      name: "CodeForge",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=CodeForge",
-      tier: "silver"
-    },
-    {
-      id: 7,
-      name: "DevOps Inc",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=DevOps+Inc",
-      tier: "silver"
-    },
-    {
-      id: 8,
-      name: "Cloud Systems",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=Cloud+Systems",
-      tier: "silver"
-    },
-    {
-      id: 9,
-      name: "Tech Solutions",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=Tech+Solutions",
-      tier: "silver"
-    },
-    {
-      id: 10,
-      name: "Digital Works",
-      logo: "https://placehold.co/400x200/1a1a1a/ffffff?text=Digital+Works",
-      tier: "silver"
-    },
-    {
-      id: 11,
       name: "Quality Talks",
       logo: "/sponsors/Quality-Talks-Logo-1.png",
       tier: "community"
     },
     {
-      id: 12,
+      id: 2,
       name: "MoTPorto",
       logo: "/sponsors/MoTPorto.jpeg",
       tier: "community"
@@ -144,24 +84,21 @@ const Index = () => {
     },
     {
       time: "09:00 - 10:00",
-      title: "Introduction to Modern Testing Practices",
-      speaker: "Alex Johnson",
-      description: "A comprehensive overview of the latest testing methodologies and practices in the industry.",
-      speakerImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+      title: "To Be Announced",
+      speaker: "TBD",
+      description: "To Be Announced"
     },
     {
       time: "10:15 - 11:15",
-      title: "Continuous Testing in DevOps Pipeline",
-      speaker: "David Chen",
-      description: "Learn how to integrate automated testing seamlessly within your DevOps workflows.",
-      speakerImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+      title: "To Be Announced",
+      speaker: "TBD",
+      description: "To Be Announced"
     },
     {
       time: "11:30 - 12:30",
-      title: "AI-Powered Testing Strategies",
-      speaker: "Sarah Wilson",
-      description: "Exploring how artificial intelligence is transforming the landscape of software testing.",
-      speakerImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+      title: "To Be Announced",
+      speaker: "TBD",
+      description: "To Be Announced"
     },
     {
       time: "12:30 - 14:00",
@@ -169,24 +106,21 @@ const Index = () => {
     },
     {
       time: "14:00 - 15:00",
-      title: "Security-First Testing Approach",
-      speaker: "Jessica Lee",
-      description: "A deep dive into implementing security testing throughout the development lifecycle.",
-      speakerImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+      title: "To Be Announced",
+      speaker: "TBD",
+      description: "To Be Announced"
     },
     {
       time: "15:15 - 16:15",
-      title: "Performance Testing at Scale",
-      speaker: "Michael Brown",
-      description: "Master the art of performance testing in large-scale applications and microservices.",
-      speakerImage: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+      title: "To Be Announced",
+      speaker: "TBD",
+      description: "To Be Announced"
     },
     {
       time: "16:30 - 17:30",
-      title: "Test Automation Best Practices",
-      speaker: "Emily Parker",
-      description: "Learn the industry's best practices for creating maintainable and efficient test automation frameworks.",
-      speakerImage: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
+      title: "To Be Announced",
+      speaker: "TBD",
+      description: "To Be Announced"
     },
     {
       time: "17:30 - 18:00",
@@ -256,7 +190,7 @@ const Index = () => {
             size="lg"
             asChild
           >
-            <a href="#register">GRAB YOUR SEAT NOW</a>
+            <a href="#register" aria-label="Register for Test Society 2025 Conference">GRAB YOUR SEAT NOW</a>
           </Button>
         </div>
       </section>
@@ -272,10 +206,15 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="black-bg section-padding">
+      <section id="about" className="black-bg section-padding relative">
+        <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none">
+          <div className="absolute left-8 top-1/4 w-48 h-48 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
+          <div className="absolute left-16 top-1/2 w-36 h-36 rounded-full bg-teal-800/50 blur-xl"></div>
+          <div className="absolute left-4 top-3/4 w-56 h-56 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
+        </div>
         <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="pt-16 pb-16">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="order-2 md:order-1 pt-8 md:pt-16 pb-8 md:pb-16">
               <SectionHeading
                 title="Welcome to the Biggest Quality Assurance Conference"
                 align="left"
@@ -291,11 +230,11 @@ const Index = () => {
                 Don't miss this opportunity to connect with peers, learn from industry leaders, and stay ahead in the rapidly evolving world of software testing.
               </p>
             </div>
-            <div>
+            <div className="order-1 md:order-2 relative w-full h-[250px] sm:h-[350px] md:h-[500px]">
               <img 
                 src="/images/about.png" 
                 alt="About Test Society Conference" 
-                className="rounded-lg object-cover w-full h-[600px] ml-24" 
+                className="absolute w-full h-full object-cover rounded-lg md:ml-24 shadow-xl" 
               />
             </div>
           </div>
@@ -326,7 +265,12 @@ const Index = () => {
       </section>
 
       {/* Why Attend Section */}
-      <section className="black-bg section-padding">
+      <section className="black-bg section-padding relative">
+        <div className="absolute right-0 top-0 w-1/3 h-full pointer-events-none">
+          <div className="absolute right-8 top-1/4 w-56 h-56 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
+          <div className="absolute right-16 top-1/2 w-36 h-36 rounded-full bg-teal-800/50 blur-xl"></div>
+          <div className="absolute right-4 top-3/4 w-48 h-48 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
+        </div>
         <div className="container mx-auto pt-16 pb-16">
           <SectionHeading
             title="Why You Should Join Event"
@@ -334,26 +278,83 @@ const Index = () => {
           />
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-16 h-16 bg-[#f4a82e]"></div>
+              <div className="flex-shrink-0 w-16 h-16 bg-[#f4a82e] rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-teal-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
               <div>
                 <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">World Class Speakers</h3>
                 <p className="text-white">Learn from the best in the industry with our lineup of exceptional speakers who bring years of expertise and insights to share.</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-16 h-16 bg-[#f4a82e]"></div>
+              <div className="flex-shrink-0 w-16 h-16 bg-[#f4a82e] rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-teal-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
               <div>
                 <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Hands-on Workshops</h3>
                 <p className="text-white">Gain practical skills through our interactive workshops designed to enhance your testing abilities and solve real-world challenges.</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
-              <div className="flex-shrink-0 w-16 h-16 bg-[#f4a82e]"></div>
+              <div className="flex-shrink-0 w-16 h-16 bg-[#f4a82e] rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-teal-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
               <div>
                 <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Networking Opportunities</h3>
                 <p className="text-white">Connect with fellow professionals, industry leaders, and potential collaborators in a setting designed for meaningful interactions.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Schedule Section */}
+      <section id="schedule" className="relative section-padding">
+        <div 
+          className="absolute inset-0 -z-10"
+          style={{ 
+            backgroundImage: "url('/images/conferenceRoom.png')",
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            transform: 'translate3d(0,0,0)',
+            willChange: 'transform'
+          }}
+        />
+        <div className="container mx-auto pt-16 pb-16 relative z-10">
+          <SectionHeading
+            title="Event Schedule"
+            subtitle="Plan your day at Test Society 2025"
+            textColor="text-[#f4a82e]"
+          />
+
+          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+            {scheduleItems.map((item, index) => (
+              <EventScheduleItem
+                key={index}
+                time={item.time}
+                title={item.title}
+                speaker={item.speaker}
+                description={item.description}
+              />
+            ))}
+          </div>
+
+          <div className="text-center mt-16">
+            <Button 
+              className="bg-teal-800/50 text-white/50 px-8 py-4 uppercase tracking-wide font-bold cursor-not-allowed"
+              disabled
+              aria-label="Download full schedule (Coming Soon)"
+            >
+              DOWNLOAD FULL SCHEDULE
+            </Button>
           </div>
         </div>
       </section>
@@ -378,7 +379,7 @@ const Index = () => {
             
             <div className="grid md:grid-cols-2 gap-8 mt-12">
               {/* Single Ticket */}
-              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-[#f4a82e] transition-colors duration-300 relative">
+              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border border-white/10">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-white mb-2">Single Ticket</h3>
                   <div className="flex items-center justify-center gap-2 mb-6">
@@ -409,7 +410,7 @@ const Index = () => {
               </div>
 
               {/* Group Ticket */}
-              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border-2 border-teal-800 hover:border-teal-700 transition-colors duration-300 relative transform scale-105">
+              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border-2 border-teal-800 relative transform scale-105">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-teal-800 text-white px-4 py-1 rounded-full text-sm font-bold">
                   BEST VALUE
                 </div>
@@ -448,43 +449,11 @@ const Index = () => {
               <Button 
                 className="bg-teal-800 hover:bg-teal-700 text-white text-lg px-12 py-4 uppercase tracking-wide font-bold rounded-md font-montserrat"
                 size="lg"
+                aria-label="Purchase tickets for Test Society 2025 Conference"
               >
                 Purchase Tickets Now
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Schedule Section */}
-      <section id="schedule" className="black-bg section-padding">
-        <div className="container mx-auto pt-16 pb-16">
-          <SectionHeading
-            title="Event Schedule"
-            subtitle="Plan your day at Test Society 2025"
-            textColor="text-[#f4a82e]"
-          />
-
-          <div className="max-w-4xl mx-auto bg-black/10 rounded-2xl p-6">
-            {scheduleItems.map((item, index) => (
-              <EventScheduleItem
-                key={index}
-                time={item.time}
-                title={item.title}
-                speaker={item.speaker}
-                description={item.description}
-                speakerImage={item.speakerImage}
-              />
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <Button 
-              className="bg-teal-800 hover:bg-teal-700 text-white px-8 py-4 uppercase tracking-wide font-bold"
-              asChild
-            >
-              <a href="#" download>DOWNLOAD FULL SCHEDULE</a>
-            </Button>
           </div>
         </div>
       </section>
@@ -507,6 +476,17 @@ const Index = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Lisbon Congress Centre</h3>
                     <p className="text-white/80">R. António Gião 2, 2829-513 Caparica, Portugal</p>
+                    <a 
+                      href="https://maps.google.com/?q=R.+António+Gião+2,+2829-513+Caparica,+Portugal"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="md:hidden inline-flex items-center mt-2 text-[#f4a82e] hover:text-[#f4a82e]/80 transition-colors"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                      View on Google Maps
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -535,8 +515,9 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl">
+            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl hidden md:block">
               <iframe
+                title="Test Society 2025 Venue Location - Lisbon Congress Centre"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.0000000000005!2d-9.2345!3d38.6625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ecc2b7c5d5d5d%3A0x5d5d5d5d5d5d5d5d!2sR.%20Ant%C3%B3nio%20Gi%C3%A3o%202%2C%202829-513%20Caparica!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
@@ -552,7 +533,12 @@ const Index = () => {
       </section>
 
       {/* Sponsors Section */}
-      <section id="sponsors" className="black-bg section-padding">
+      <section id="sponsors" className="black-bg section-padding relative">
+        <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none">
+          <div className="absolute left-8 top-1/4 w-56 h-56 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
+          <div className="absolute left-16 top-1/2 w-36 h-36 rounded-full bg-teal-800/50 blur-xl"></div>
+          <div className="absolute left-4 top-3/4 w-48 h-48 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
+        </div>
         <div className="container mx-auto pt-16 pb-16">
           <SectionHeading
             title="Official Sponsors"
@@ -726,7 +712,7 @@ const Index = () => {
               className="bg-[#f4a82e] hover:bg-[#f4a82e]/90 text-black px-8 py-4 uppercase tracking-wide font-bold"
               asChild
             >
-              <a href="/gallery">VIEW FULL EVENT GALLERY</a>
+              <a href="/gallery" aria-label="View full event gallery from Test Society 2024">VIEW FULL EVENT GALLERY</a>
             </Button>
           </div>
         </div>
