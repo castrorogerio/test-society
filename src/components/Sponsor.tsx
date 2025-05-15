@@ -1,10 +1,9 @@
 interface SponsorProps {
-  name: string;
   logo: string;
   tier: 'platinum' | 'gold' | 'silver' | 'community';
 }
 
-const Sponsor = ({ name, logo, tier }: SponsorProps) => {
+const Sponsor = ({ logo, tier }: SponsorProps) => {
   const sizeClass = {
     platinum: 'h-28 md:h-36',
     gold: 'h-24 md:h-32',
@@ -17,10 +16,9 @@ const Sponsor = ({ name, logo, tier }: SponsorProps) => {
       <div className="relative flex flex-col items-center justify-center">
         <img 
           src={logo} 
-          alt={name} 
+          alt="Sponsor logo" 
           className={`${sizeClass} object-contain`}
         />
-        <span className="mt-4 text-white/80 text-sm font-medium">{name}</span>
       </div>
     </div>
   );

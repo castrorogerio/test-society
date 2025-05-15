@@ -10,7 +10,6 @@ import { Button } from "../components/ui/button";
 
 type Sponsor = {
   id: number;
-  name: string;
   logo: string;
   tier: 'platinum' | 'gold' | 'silver' | 'community';
 };
@@ -65,14 +64,12 @@ const Index = () => {
   const sponsors: Sponsor[] = [
     {
       id: 1,
-      name: "Quality Talks",
       logo: "/sponsors/Quality-Talks-Logo-1.png",
       tier: "community"
     },
     {
       id: 2,
-      name: "MoTPorto",
-      logo: "/sponsors/MoTPorto.jpeg",
+      logo: "/sponsors/MoTPorto.png",
       tier: "community"
     }
   ];
@@ -202,14 +199,21 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="black-bg section-padding relative">
-        <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none">
-          <div className="absolute left-8 top-1/4 w-48 h-48 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
-          <div className="absolute left-16 top-1/2 w-36 h-36 rounded-full bg-teal-800/50 blur-xl"></div>
-          <div className="absolute left-4 top-3/4 w-56 h-56 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
-        </div>
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <section id="about" className="py-12 relative">
+        <div 
+          className="absolute inset-0 -z-10"
+          style={{ 
+            backgroundImage: "url('/images/about-bg.png')",
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'top center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            transform: 'translate3d(0,0,0)',
+            willChange: 'transform'
+          }}
+        />
+        <div className="container mx-auto px-4 pt-8 pb-8">
+          <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
             <div className="order-2 md:order-1 pt-8 md:pt-16 pb-8 md:pb-16">
               <SectionHeading
                 title="Welcome to the Biggest Quality Assurance Conference"
@@ -226,21 +230,23 @@ const Index = () => {
                 Don't miss this opportunity to connect with peers, learn from industry leaders, and stay ahead in the rapidly evolving world of software testing.
               </p>
             </div>
-            <div className="order-1 md:order-2 relative w-full h-[250px] sm:h-[350px] md:h-[500px]">
-              <img 
-                src="/images/about.png" 
-                alt="About Test Society Conference" 
-                className="absolute w-full h-full object-cover rounded-lg md:ml-24 shadow-xl" 
-              />
+            <div className="order-1 md:order-2 flex justify-center items-center">
+              <div className="w-full max-w-[1200px]">
+                <img 
+                  src="/images/about.png" 
+                  alt="About Test Society Conference" 
+                  className="w-full h-auto rounded-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Speakers Section */}
-      <section id="speakers" className="relative section-padding">
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-        <div className="container mx-auto pt-16 pb-16 relative z-10">
+      <section id="speakers" className="py-12 relative">
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
           <SectionHeading 
             title="The Speakers" 
             subtitle="Learn from industry experts and thought leaders"
@@ -261,16 +267,17 @@ const Index = () => {
       </section>
 
       {/* Why Attend Section */}
-      <section className="black-bg section-padding relative">
-        <div className="absolute right-0 top-0 w-1/3 h-full pointer-events-none">
-          <div className="absolute right-8 top-1/4 w-56 h-56 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
-          <div className="absolute right-16 top-1/2 w-36 h-36 rounded-full bg-teal-800/50 blur-xl"></div>
-          <div className="absolute right-4 top-3/4 w-48 h-48 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
-        </div>
-        <div className="container mx-auto pt-16 pb-16">
+      <section className="py-12 relative">
+        <div 
+          className="absolute inset-0"
+          style={{ 
+            background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%)'
+          }}
+        ></div>
+        <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
           <SectionHeading
             title="Why You Should Join Event"
-            textColor="text-[#f4a82e]"
+            textColor="text-teal-800"
           />
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex items-start space-x-4">
@@ -280,7 +287,7 @@ const Index = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">World Class Speakers</h3>
+                <h3 className="text-teal-800 text-xl font-semibold mb-2">World Class Speakers</h3>
                 <p className="text-white">Learn from the best in the industry with our lineup of exceptional speakers who bring years of expertise and insights to share.</p>
               </div>
             </div>
@@ -291,7 +298,7 @@ const Index = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Hands-on Workshops</h3>
+                <h3 className="text-teal-800 text-xl font-semibold mb-2">Hands-on Workshops</h3>
                 <p className="text-white">Gain practical skills through our interactive workshops designed to enhance your testing abilities and solve real-world challenges.</p>
               </div>
             </div>
@@ -302,7 +309,7 @@ const Index = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Networking Opportunities</h3>
+                <h3 className="text-teal-800 text-xl font-semibold mb-2">Networking Opportunities</h3>
                 <p className="text-white">Connect with fellow professionals, industry leaders, and potential collaborators in a setting designed for meaningful interactions.</p>
               </div>
             </div>
@@ -311,27 +318,16 @@ const Index = () => {
       </section>
 
       {/* Schedule Section */}
-      <section id="schedule" className="relative section-padding">
-        <div 
-          className="absolute inset-0 -z-10"
-          style={{ 
-            backgroundImage: "url('/images/conferenceRoom.png')",
-            backgroundAttachment: 'fixed',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            transform: 'translate3d(0,0,0)',
-            willChange: 'transform'
-          }}
-        />
-        <div className="container mx-auto pt-16 pb-16 relative z-10">
+      <section id="schedule" className="py-12 relative">
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
           <SectionHeading
             title="Event Schedule"
             subtitle="Plan your day at Test Society 2025"
             textColor="text-[#f4a82e]"
           />
 
-          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+          <div className="max-w-4xl mx-auto bg-black/50 backdrop-blur-sm rounded-2xl p-6">
             {scheduleItems.map((item, index) => (
               <EventScheduleItem
                 key={index}
@@ -364,7 +360,7 @@ const Index = () => {
           backgroundImage: 'linear-gradient(323deg, #f4a82e 21%, #865403 100%)'
         }}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 pt-8 pb-8">
           <div className="max-w-4xl mx-auto">
             <SectionHeading
               title="Get Your Tickets"
@@ -455,9 +451,9 @@ const Index = () => {
       </section>
 
       {/* Location Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative py-12 overflow-hidden">
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Venue Location</h2>
@@ -529,13 +525,20 @@ const Index = () => {
       </section>
 
       {/* Sponsors Section */}
-      <section id="sponsors" className="black-bg section-padding relative">
-        <div className="absolute left-0 top-0 w-1/3 h-full pointer-events-none">
-          <div className="absolute left-8 top-1/4 w-56 h-56 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
-          <div className="absolute left-16 top-1/2 w-36 h-36 rounded-full bg-teal-800/50 blur-xl"></div>
-          <div className="absolute left-4 top-3/4 w-48 h-48 rounded-full bg-[#f4a82e]/50 blur-xl"></div>
-        </div>
-        <div className="container mx-auto pt-16 pb-16">
+      <section id="sponsors" className="py-12 relative">
+        <div 
+          className="absolute inset-0 -z-10"
+          style={{ 
+            backgroundImage: "url('/images/sponsors-bg.png')",
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'top center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            transform: 'translate3d(0,0,0)',
+            willChange: 'transform'
+          }}
+        />
+        <div className="container mx-auto px-4 pt-8 pb-8">
           <SectionHeading
             title="Official Sponsors"
             subtitle="Our valued partners who make this event possible"
@@ -545,14 +548,13 @@ const Index = () => {
           <div className="space-y-16">
             {/* Platinum Sponsors */}
             <div className="text-center">
-              <h3 className="text-[#115e59] text-3xl font-bold mb-12">Platinum Sponsors</h3>
+              <h3 className="text-white text-3xl font-bold mb-12">Platinum Sponsors</h3>
               <div className="grid grid-cols-2 gap-8 mb-16 max-w-2xl mx-auto">
                 {sponsors
                   .filter(sponsor => sponsor.tier === 'platinum')
                   .map(sponsor => (
                     <Sponsor 
                       key={sponsor.id}
-                      name={sponsor.name}
                       logo={sponsor.logo}
                       tier={sponsor.tier}
                     />
@@ -562,14 +564,13 @@ const Index = () => {
             
             {/* Gold Sponsors */}
             <div className="text-center">
-              <h3 className="text-[#115e59] text-2xl font-bold mb-12">Gold Sponsors</h3>
+              <h3 className="text-white text-2xl font-bold mb-12">Gold Sponsors</h3>
               <div className="grid grid-cols-3 gap-8 mb-16 max-w-3xl mx-auto">
                 {sponsors
                   .filter(sponsor => sponsor.tier === 'gold')
                   .map(sponsor => (
                     <Sponsor 
                       key={sponsor.id}
-                      name={sponsor.name}
                       logo={sponsor.logo}
                       tier={sponsor.tier}
                     />
@@ -579,14 +580,13 @@ const Index = () => {
             
             {/* Silver Sponsors */}
             <div className="text-center">
-              <h3 className="text-[#115e59] text-xl font-bold mb-12">Silver Sponsors</h3>
+              <h3 className="text-white text-xl font-bold mb-12">Silver Sponsors</h3>
               <div className="grid grid-cols-5 gap-6 mb-16 max-w-5xl mx-auto">
                 {sponsors
                   .filter(sponsor => sponsor.tier === 'silver')
                   .map(sponsor => (
                     <Sponsor 
                       key={sponsor.id}
-                      name={sponsor.name}
                       logo={sponsor.logo}
                       tier={sponsor.tier}
                     />
@@ -596,14 +596,13 @@ const Index = () => {
 
             {/* Community Sponsors */}
             <div className="text-center">
-              <h3 className="text-[#115e59] text-xl font-bold mb-12">Community Sponsors</h3>
+              <h3 className="text-white text-xl font-bold mb-12">Community Sponsors</h3>
               <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
                 {sponsors
                   .filter(sponsor => sponsor.tier === 'community')
                   .map(sponsor => (
                     <Sponsor 
                       key={sponsor.id}
-                      name={sponsor.name}
                       logo={sponsor.logo}
                       tier={sponsor.tier}
                     />
@@ -615,9 +614,9 @@ const Index = () => {
       </section>
 
       {/* Last Year's Event Section */}
-      <section id="past-events" className="relative section-padding">
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
-        <div className="container mx-auto pt-16 pb-16 relative z-10">
+      <section id="past-events" className="py-12 relative">
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
           <SectionHeading
             title="Last Year's Event"
             subtitle="Highlights from Test Society 2024"
