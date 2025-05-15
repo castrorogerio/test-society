@@ -32,23 +32,21 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div className="countdown-item border-2 border-teal-800 rounded-lg p-6 backdrop-blur-sm bg-black/20">
-        <div className="text-4xl md:text-6xl font-bold mb-2 text-white">{timeLeft.days}</div>
-        <p className="text-white opacity-80">DAYS</p>
-      </div>
-      <div className="countdown-item border-2 border-teal-800 rounded-lg p-6 backdrop-blur-sm bg-black/20">
-        <div className="text-4xl md:text-6xl font-bold mb-2 text-white">{timeLeft.hours}</div>
-        <p className="text-white opacity-80">HOURS</p>
-      </div>
-      <div className="countdown-item border-2 border-teal-800 rounded-lg p-6 backdrop-blur-sm bg-black/20">
-        <div className="text-4xl md:text-6xl font-bold mb-2 text-white">{timeLeft.minutes}</div>
-        <p className="text-white opacity-80">MINUTES</p>
-      </div>
-      <div className="countdown-item border-2 border-teal-800 rounded-lg p-6 backdrop-blur-sm bg-black/20">
-        <div className="text-4xl md:text-6xl font-bold mb-2 text-white">{timeLeft.seconds}</div>
-        <p className="text-white opacity-80">SECONDS</p>
-      </div>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+      {[
+        { value: timeLeft.days, label: 'DAYS' },
+        { value: timeLeft.hours, label: 'HOURS' },
+        { value: timeLeft.minutes, label: 'MINUTES' },
+        { value: timeLeft.seconds, label: 'SECONDS' },
+      ].map((item, idx) => (
+        <div
+          key={item.label}
+          className="countdown-item border-2 border-teal-800 rounded-lg bg-black/60 flex flex-col items-center justify-center min-w-[150px] min-h-[120px] md:min-w-[200px] md:min-h-[140px] p-4 md:p-6"
+        >
+          <div className="text-5xl md:text-6xl font-extrabold text-white mb-1 md:mb-2 leading-none">{item.value}</div>
+          <div className="text-white text-base md:text-lg font-semibold tracking-widest uppercase opacity-90">{item.label}</div>
+        </div>
+      ))}
     </div>
   );
 };

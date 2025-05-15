@@ -152,13 +152,19 @@ const Index = () => {
       <Header />
       {/* Hero Section */}
       <section 
-        className="relative min-h-screen flex items-center justify-center bg-cover bg-center"
+        className="relative min-h-screen flex items-center justify-center bg-cover bg-center pt-32 pb-24"
         style={{ backgroundImage: "url('/images/banner.png')" }}
       >
         <div className="container mx-auto px-4 z-10 text-center flex flex-col items-center justify-center font-montserrat">
-          <h1 className="text-[#f4a82e] text-5xl md:text-7xl font-bold mb-4 tracking-wider">TEST SOCIETY 2025</h1>
-          <p className="text-white text-xl md:text-3xl mb-32 font-semibold">QUALITY ASSURANCE CONFERENCE</p>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-16 mb-16">
+          <h1 className="text-[#f4a82e] text-5xl md:text-7xl font-bold mb-8 tracking-wider">TEST SOCIETY 2025</h1>
+          <p className="text-white text-xl md:text-3xl mb-16 font-semibold">QUALITY ASSURANCE CONFERENCE</p>
+
+          {/* Countdown */}
+          <div className="mt-8 mb-20">
+            <Countdown />
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center items-center gap-24 mb-20">
             <div className="flex items-center text-white text-2xl md:text-3xl">
               <span className="text-[#f4a82e] mr-3">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10">
@@ -186,22 +192,12 @@ const Index = () => {
             </div>
           </div>
           <Button 
-            className="bg-teal-800 hover:bg-teal-700 text-white text-lg px-12 py-4 mt-8 uppercase tracking-wide font-bold rounded-md font-montserrat" 
+            className="bg-teal-800 hover:bg-teal-700 text-white text-lg px-12 py-4 mt-12 uppercase tracking-wide font-bold rounded-md font-montserrat" 
             size="lg"
             asChild
           >
             <a href="#register" aria-label="Register for Test Society 2025 Conference">GRAB YOUR SEAT NOW</a>
           </Button>
-        </div>
-      </section>
-
-      {/* Countdown Section */}
-      <section className="py-12" style={{ 
-        background: 'transparent',
-        backgroundImage: 'linear-gradient(323deg, #f4a82e 21%, #865403 100%)'
-      }}>
-        <div className="container mx-auto px-4">
-          <Countdown />
         </div>
       </section>
 

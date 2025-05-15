@@ -27,15 +27,15 @@ const EventScheduleItem = ({ time, title, speaker, description, speakerImage, is
             {speaker && (
               <div className="flex items-center gap-2 ml-12 mb-2">
                 {speakerImage && (
-                  <img 
-                    src={speakerImage} 
-                    alt={speaker} 
-                    className="w-8 h-8 rounded-full object-cover border-2 border-teal-800 group-hover:border-[#f4a82e] transition-colors duration-300"
-                  />
+              <img 
+                src={speakerImage} 
+                alt={speaker} 
+                className="w-8 h-8 rounded-full object-cover border-2 border-teal-800 group-hover:border-[#f4a82e] transition-colors duration-300"
+              />
                 )}
                 <span className="text-[#f4a82e] font-medium">{speaker}</span>
-              </div>
-            )}
+            </div>
+          )}
             {description && <p className="text-white/70 text-sm mb-2 ml-12">{description}</p>}
           </div>
         </div>
