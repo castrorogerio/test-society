@@ -322,8 +322,8 @@ const Index = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Hands-on Workshops</h3>
-                <p className="text-white">Gain practical skills through our interactive workshops designed to enhance your testing abilities and solve real-world challenges.</p>
+                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Elevate Your Expertise</h3>
+                <p className="text-white">Advance your professional skills by learning the latest testing methodologies, innovative tools, and forward-thinking strategies directly from industry pioneers.</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
