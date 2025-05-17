@@ -16,7 +16,7 @@ const EventScheduleItem = ({ time, title, speaker, description, speakerImage, is
       {/* Timeline dot */}
       <div className={`absolute left-[-3px] top-2 w-1.5 h-1.5 rounded-full ${isBreak ? 'bg-[#f4a82e]' : 'bg-teal-800'} group-hover:bg-[#f4a82e] transition-colors duration-300`}></div>
       
-      <div className={`${isBreak ? 'bg-black/10' : 'bg-black/20'} rounded-lg p-4 hover:bg-black/40 transition-all duration-300 transform group-hover:translate-x-2 border border-teal-800 group-hover:border-teal-700`}>
+      <div className={`${isBreak ? 'bg-black/10' : 'bg-black/60'} rounded-lg p-4 hover:bg-black/40 transition-all duration-300 transform group-hover:translate-x-2 border border-teal-800 group-hover:border-teal-700`}>
         <div className="flex items-start gap-4">
           {/* Time and Content */}
           <div className={`flex-grow ${isBreak ? 'min-h-[32px]' : 'min-h-[48px]'} flex flex-col justify-center`}>

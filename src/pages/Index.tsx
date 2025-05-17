@@ -11,7 +11,7 @@ import { Button } from "../components/ui/button";
 type Sponsor = {
   id: number;
   logo: string;
-  tier: 'platinum' | 'gold' | 'silver' | 'community';
+  tier: 'platinum' | 'gold' | 'silver' | 'community' | 'partner';
 };
 
 const Index = () => {
@@ -64,12 +64,22 @@ const Index = () => {
   const sponsors: Sponsor[] = [
     {
       id: 1,
-      logo: "/sponsors/Quality-Talks-Logo-1.png",
-      tier: "community"
+      logo: "/sponsors/qualitytalks_logo.png",
+      tier: "partner"
     },
     {
       id: 2,
       logo: "/sponsors/MoTPorto.png",
+      tier: "partner"
+    },
+    {
+      id: 3,
+      logo: "/sponsors/brightest_logo.png",
+      tier: "silver"
+    },
+    {
+      id: 4,
+      logo: "/sponsors/xelerate_logo.png",
       tier: "community"
     }
   ];
@@ -199,7 +209,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-12 relative">
+      <section id="about" className="py-12 relative shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.8),0_20px_50px_-15px_rgba(0,0,0,0.8)]">
         <div 
           className="absolute inset-0 -z-10"
           style={{ 
@@ -245,7 +255,7 @@ const Index = () => {
 
       {/* Speakers Section */}
       <section id="speakers" className="py-12 relative">
-        <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
         <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
           <SectionHeading 
             title="The Speakers" 
@@ -267,17 +277,26 @@ const Index = () => {
       </section>
 
       {/* Why Attend Section */}
-      <section className="py-12 relative">
+      <section id="why-attend" className="py-12 relative shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.8),0_20px_50px_-15px_rgba(0,0,0,0.8)] overflow-hidden">
         <div 
           className="absolute inset-0"
           style={{ 
-            background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%)'
+            background: 'linear-gradient(135deg, #18403e 0%, #1a4a47 50%, #1c5451 100%)'
+          }}
+        ></div>
+        <div 
+          className="absolute w-96 h-96 rounded-full bg-[#f4a82e] opacity-20 blur-3xl transition-transform duration-300 ease-out"
+          style={{
+            transform: 'translate(var(--mouse-x, 0), var(--mouse-y, 0))',
+            left: '0',
+            top: '50%',
+            translate: '0 -50%'
           }}
         ></div>
         <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
           <SectionHeading
             title="Why You Should Join Event"
-            textColor="text-teal-800"
+            textColor="text-[#f4a82e]"
           />
           <div className="grid md:grid-cols-3 gap-8">
             <div className="flex items-start space-x-4">
@@ -287,7 +306,7 @@ const Index = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-teal-800 text-xl font-semibold mb-2">World Class Speakers</h3>
+                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">World Class Speakers</h3>
                 <p className="text-white">Learn from the best in the industry with our lineup of exceptional speakers who bring years of expertise and insights to share.</p>
               </div>
             </div>
@@ -298,7 +317,7 @@ const Index = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-teal-800 text-xl font-semibold mb-2">Hands-on Workshops</h3>
+                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Hands-on Workshops</h3>
                 <p className="text-white">Gain practical skills through our interactive workshops designed to enhance your testing abilities and solve real-world challenges.</p>
               </div>
             </div>
@@ -309,7 +328,7 @@ const Index = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-teal-800 text-xl font-semibold mb-2">Networking Opportunities</h3>
+                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Networking Opportunities</h3>
                 <p className="text-white">Connect with fellow professionals, industry leaders, and potential collaborators in a setting designed for meaningful interactions.</p>
               </div>
             </div>
@@ -354,18 +373,26 @@ const Index = () => {
       {/* Ticket Section */}
       <section 
         id="tickets"
-        className="py-12" 
+        className="py-12 relative shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.8),0_20px_50px_-15px_rgba(0,0,0,0.8)] overflow-hidden" 
         style={{ 
-          background: 'transparent',
-          backgroundImage: 'linear-gradient(323deg, #f4a82e 21%, #865403 100%)'
+          background: 'linear-gradient(135deg, #18403e 0%, #1a4a47 50%, #1c5451 100%)'
         }}
       >
-        <div className="container mx-auto px-4 pt-8 pb-8">
+        <div 
+          className="absolute w-[600px] h-[600px] rounded-full bg-[#f4a82e] opacity-20 blur-3xl transition-transform duration-300 ease-out"
+          style={{
+            transform: 'translate(var(--mouse-x, 0), var(--mouse-y, 0))',
+            right: '0',
+            top: '50%',
+            translate: '0 -50%'
+          }}
+        ></div>
+        <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <SectionHeading
               title="Get Your Tickets"
               subtitle="Choose the best option for you"
-              textColor="text-white"
+              textColor="text-[#f4a82e]"
               align="center"
             />
             
@@ -373,7 +400,7 @@ const Index = () => {
               {/* Single Ticket */}
               <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border border-white/10">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-white mb-2">Single Ticket</h3>
+                  <h3 className="text-2xl font-bold text-[#f4a82e] mb-2">Single Ticket</h3>
                   <div className="flex items-center justify-center gap-2 mb-6">
                     <span className="text-4xl font-bold text-[#f4a82e]">50€</span>
                     <span className="text-white/70">per ticket</span>
@@ -402,12 +429,12 @@ const Index = () => {
               </div>
 
               {/* Group Ticket */}
-              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border-2 border-teal-800 relative transform scale-105">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-teal-800 text-white px-4 py-1 rounded-full text-sm font-bold">
+              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border-2 border-[#f4a82e] relative transform scale-105">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#f4a82e] text-black px-4 py-1 rounded-full text-sm font-bold">
                   BEST VALUE
                 </div>
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-white mb-2">Group Ticket</h3>
+                  <h3 className="text-2xl font-bold text-[#f4a82e] mb-2">Group Ticket</h3>
                   <div className="flex items-center justify-center gap-2 mb-6">
                     <span className="text-4xl font-bold text-[#f4a82e]">45€</span>
                     <span className="text-white/70">per ticket (min. 3)</span>
@@ -439,7 +466,7 @@ const Index = () => {
             {/* Add single buy button below cards */}
             <div className="mt-12 text-center">
               <Button 
-                className="bg-teal-800 hover:bg-teal-700 text-white text-lg px-12 py-4 uppercase tracking-wide font-bold rounded-md font-montserrat"
+                className="bg-[#f4a82e] hover:bg-[#f4a82e]/90 text-black text-lg px-12 py-4 uppercase tracking-wide font-bold rounded-md font-montserrat"
                 size="lg"
                 aria-label="Purchase tickets for Test Society 2025 Conference"
               >
@@ -525,7 +552,7 @@ const Index = () => {
       </section>
 
       {/* Sponsors Section */}
-      <section id="sponsors" className="py-12 relative">
+      <section id="sponsors" className="py-12 relative shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.8),0_20px_50px_-15px_rgba(0,0,0,0.8)]">
         <div 
           className="absolute inset-0 -z-10"
           style={{ 
@@ -549,7 +576,7 @@ const Index = () => {
             {/* Platinum Sponsors */}
             <div className="text-center">
               <h3 className="text-white text-3xl font-bold mb-12">Platinum Sponsors</h3>
-              <div className="grid grid-cols-2 gap-8 mb-16 max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 gap-8 mb-16 max-w-2xl mx-auto">
                 {sponsors
                   .filter(sponsor => sponsor.tier === 'platinum')
                   .map(sponsor => (
@@ -565,7 +592,7 @@ const Index = () => {
             {/* Gold Sponsors */}
             <div className="text-center">
               <h3 className="text-white text-2xl font-bold mb-12">Gold Sponsors</h3>
-              <div className="grid grid-cols-3 gap-8 mb-16 max-w-3xl mx-auto">
+              <div className="grid grid-cols-1 gap-8 mb-16 max-w-3xl mx-auto">
                 {sponsors
                   .filter(sponsor => sponsor.tier === 'gold')
                   .map(sponsor => (
@@ -581,7 +608,7 @@ const Index = () => {
             {/* Silver Sponsors */}
             <div className="text-center">
               <h3 className="text-white text-xl font-bold mb-12">Silver Sponsors</h3>
-              <div className="grid grid-cols-5 gap-6 mb-16 max-w-5xl mx-auto">
+              <div className="grid grid-cols-1 gap-6 mb-16 max-w-5xl mx-auto">
                 {sponsors
                   .filter(sponsor => sponsor.tier === 'silver')
                   .map(sponsor => (
@@ -597,9 +624,25 @@ const Index = () => {
             {/* Community Sponsors */}
             <div className="text-center">
               <h3 className="text-white text-xl font-bold mb-12">Community Sponsors</h3>
-              <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
+              <div className="grid grid-cols-1 gap-6 max-w-2xl mx-auto">
                 {sponsors
                   .filter(sponsor => sponsor.tier === 'community')
+                  .map(sponsor => (
+                    <Sponsor 
+                      key={sponsor.id}
+                      logo={sponsor.logo}
+                      tier={sponsor.tier}
+                    />
+                  ))}
+              </div>
+            </div>
+
+            {/* Partners Sponsors */}
+            <div className="text-center">
+              <h3 className="text-white text-xl font-bold mb-12">Partners</h3>
+              <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
+                {sponsors
+                  .filter(sponsor => sponsor.tier === 'partner')
                   .map(sponsor => (
                     <Sponsor 
                       key={sponsor.id}
@@ -715,6 +758,23 @@ const Index = () => {
 
       <Footer />
       <ScrollToTop />
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          document.addEventListener('scroll', () => {
+            const whyAttend = document.getElementById('why-attend');
+            const ball = whyAttend.querySelector('.rounded-full');
+            const rect = whyAttend.getBoundingClientRect();
+            const scrollProgress = (window.scrollY - rect.top) / rect.height;
+            
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              const x = Math.sin(scrollProgress * Math.PI * 2) * 100;
+              const y = scrollProgress * 100;
+              ball.style.setProperty('--mouse-x', x + 'px');
+              ball.style.setProperty('--mouse-y', y + 'px');
+            }
+          });
+        `
+      }} />
     </div>
   );
 };

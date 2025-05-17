@@ -1,6 +1,6 @@
 interface SponsorProps {
   logo: string;
-  tier: 'platinum' | 'gold' | 'silver' | 'community';
+  tier: 'platinum' | 'gold' | 'silver' | 'community' | 'partner';
 }
 
 const Sponsor = ({ logo, tier }: SponsorProps) => {
@@ -8,7 +8,8 @@ const Sponsor = ({ logo, tier }: SponsorProps) => {
     platinum: 'h-28 md:h-36',
     gold: 'h-24 md:h-32',
     silver: 'h-20 md:h-28',
-    community: 'h-16 md:h-24'
+    community: 'h-16 md:h-24',
+    partner: 'h-16 md:h-24'
   }[tier];
 
   return (

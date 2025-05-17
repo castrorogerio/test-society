@@ -58,7 +58,7 @@ export default {
 					dark: '#FFA000'
 				},
 				tram: {
-					DEFAULT: '#FFD02C',
+					DEFAULT: '#f4a82e',
 					dark: '#1A1A1A'
 				},
 				neutral: {

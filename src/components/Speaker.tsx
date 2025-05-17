@@ -9,7 +9,7 @@ interface SpeakerProps {
 
 const Speaker: React.FC<SpeakerProps> = ({ name, role, topic, image }) => {
   return (
-    <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-teal-800/30 hover:border-teal-700 transition-all duration-300">
+    <div className="bg-black/60 backdrop-blur-sm rounded-xl p-6 border border-teal-800/30 hover:border-teal-700 transition-all duration-300">
       <div className="flex flex-col items-center text-center">
         <div className="w-32 h-32 rounded-full overflow-hidden mb-4 bg-black/20 flex items-center justify-center">
           {image === "placeholder" ? (
