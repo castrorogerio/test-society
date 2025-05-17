@@ -81,6 +81,11 @@ const Index = () => {
       id: 4,
       logo: "/sponsors/xelerate_logo.png",
       tier: "community"
+    },
+    {
+      id: 5,
+      logo: "/sponsors/ipq_logo.png",
+      tier: "partner"
     }
   ];
 
@@ -402,7 +407,7 @@ const Index = () => {
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-[#f4a82e] mb-2">Single Ticket</h3>
                   <div className="flex items-center justify-center gap-2 mb-6">
-                    <span className="text-4xl font-bold text-[#f4a82e]">50€</span>
+                    <span className="text-4xl font-bold text-[#f4a82e]">45€</span>
                     <span className="text-white/70">per ticket</span>
                   </div>
                   <ul className="space-y-3 mb-8">
@@ -436,7 +441,7 @@ const Index = () => {
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-[#f4a82e] mb-2">Group Ticket</h3>
                   <div className="flex items-center justify-center gap-2 mb-6">
-                    <span className="text-4xl font-bold text-[#f4a82e]">45€</span>
+                    <span className="text-4xl font-bold text-[#f4a82e]">40€</span>
                     <span className="text-white/70">per ticket (min. 3)</span>
                   </div>
                   <ul className="space-y-3 mb-8">
@@ -640,7 +645,7 @@ const Index = () => {
             {/* Partners Sponsors */}
             <div className="text-center">
               <h3 className="text-white text-xl font-bold mb-12">Partners</h3>
-              <div className="grid grid-cols-2 gap-6 max-w-2xl mx-auto">
+              <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto">
                 {sponsors
                   .filter(sponsor => sponsor.tier === 'partner')
                   .map(sponsor => (
