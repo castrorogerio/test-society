@@ -231,18 +231,18 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
             <div className="order-2 md:order-1 pt-8 md:pt-16 pb-8 md:pb-16">
               <SectionHeading
-                title="Welcome to the Biggest Quality Assurance Conference"
+                title="Welcome to Test Society 2025 — The Trailblazing Quality Assurance Conference"
                 align="left"
                 textColor="text-[#f4a82e]"
               />
               <p className="text-white mb-6 text-justify text-lg md:text-xl">
-                Test Society 2025 brings together the best minds in software testing and quality assurance. Join us for a transformative experience with leading experts, hands-on workshops, and networking opportunities that will elevate your testing skills to the next level.
+              Test Society 2025 brings together top voices in software testing and quality assurance for a focused, high-impact day of learning and connection. With six insightful talks from industry experts, this event is designed to spark ideas, share practical knowledge, and elevate the QA community.
               </p>
               <p className="text-white mb-6 text-justify text-lg md:text-xl">
-                With a focus on practical applications, innovative methodologies, and future trends, this conference is designed for testers, QA managers, developers, and anyone passionate about software quality. Whether you're just starting your QA journey or are a seasoned professional, Test Society 2025 offers valuable insights for all skill levels.
+              Centered on actionable insights, new methodologies, and forward-looking trends, the conference welcomes testers, QA managers, developers, and anyone dedicated to software quality. Whether you're early in your career or an experienced professional, you'll walk away with valuable perspectives and fresh inspiration.
               </p>
               <p className="text-white text-justify text-lg md:text-xl">
-                Don't miss this opportunity to connect with peers, learn from industry leaders, and stay ahead in the rapidly evolving world of software testing.
+              Join us to connect with peers, gain expert insights, and stay ahead in the fast-moving world of software testing.
               </p>
             </div>
             <div className="order-1 md:order-2 flex justify-center items-center">
@@ -300,7 +300,7 @@ const Index = () => {
         ></div>
         <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
           <SectionHeading
-            title="Why You Should Join Event"
+            title="Why You Should Join Test Society 2025"
             textColor="text-[#f4a82e]"
           />
           <div className="grid md:grid-cols-3 gap-8">
@@ -312,7 +312,7 @@ const Index = () => {
               </div>
               <div>
                 <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">World Class Speakers</h3>
-                <p className="text-white">Learn from the best in the industry with our lineup of exceptional speakers who bring years of expertise and insights to share.</p>
+                <p className="text-white">Hear from some of the most influential voices in software testing and quality assurance. Our curated lineup of speakers brings deep expertise, fresh perspectives, and practical insights that will challenge and inspire you.</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
@@ -322,8 +322,8 @@ const Index = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Elevate Your Expertise</h3>
-                <p className="text-white">Advance your professional skills by learning the latest testing methodologies, innovative tools, and forward-thinking strategies directly from industry pioneers.</p>
+                <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Elevate Your Skills</h3>
+                <p className="text-white">Advance your professional skills  by discovering cutting-edge methodologies, tools, and strategies shaping the future of QA. Whether you're refining your craft or expanding your toolkit, you'll gain actionable knowledge to take your practice further directly from industry pioneers.</p>
               </div>
             </div>
             <div className="flex items-start space-x-4">
@@ -334,7 +334,7 @@ const Index = () => {
               </div>
               <div>
                 <h3 className="text-[#f4a82e] text-xl font-semibold mb-2">Networking Opportunities</h3>
-                <p className="text-white">Connect with fellow professionals, industry leaders, and potential collaborators in a setting designed for meaningful interactions.</p>
+                <p className="text-white">Engage with a vibrant community of QA professionals, industry leaders, great companies and innovators. This is your chance to exchange ideas, build relationships, and find collaborators who share your passion for quality.</p>
               </div>
             </div>
           </div>
@@ -351,6 +351,7 @@ const Index = () => {
             textColor="text-[#f4a82e]"
           />
 
+          {/* Schedule section temporarily commented out
           <div className="max-w-4xl mx-auto bg-black/50 backdrop-blur-sm rounded-2xl p-6">
             {scheduleItems.map((item, index) => (
               <EventScheduleItem
@@ -361,6 +362,11 @@ const Index = () => {
                 description={item.description}
               />
             ))}
+          </div>
+          */}
+          <div className="max-w-4xl mx-auto bg-black/50 backdrop-blur-sm rounded-2xl p-6 text-center">
+            <h2 className="text-2xl font-bold text-white">Schedule Coming Soon</h2>
+            <p className="text-gray-300 mt-2">Stay tuned for our exciting event schedule!</p>
           </div>
 
           <div className="text-center mt-16">
