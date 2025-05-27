@@ -726,7 +726,7 @@ const Index = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="relative group overflow-hidden rounded-xl">
                 <img 
-                  src="/gallery/IMG_6877.jpg"
+                  src="/gallery/thumbnails/36.jpg"
                   alt="Keynote Session 2024"
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
@@ -734,7 +734,7 @@ const Index = () => {
               </div>
               <div className="relative group overflow-hidden rounded-xl">
                 <img 
-                  src="/gallery/IMG_6890.jpg"
+                  src="/gallery/thumbnails/40.jpg"
                   alt="Workshop Session 2024"
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
@@ -742,7 +742,7 @@ const Index = () => {
               </div>
               <div className="relative group overflow-hidden rounded-xl">
                 <img 
-                  src="/gallery/IMG_6925.jpg"
+                  src="/gallery/thumbnails/8.jpg"
                   alt="Networking Event 2024"
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />
@@ -750,7 +750,7 @@ const Index = () => {
               </div>
               <div className="relative group overflow-hidden rounded-xl">
                 <img 
-                  src="/gallery/IMG_6928.jpg"
+                  src="/gallery/thumbnails/29.jpg"
                   alt="Panel Discussion 2024"
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                 />

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "./ui/button";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 type MenuItem = {
   href: string;
@@ -12,7 +13,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
+  const isGalleryPage = location.pathname === '/gallery';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +31,11 @@ const Header = () => {
     e.preventDefault();
     const targetId = e.currentTarget.getAttribute('href')?.substring(1);
     if (!targetId) return;
+    
+    if (!isHomePage) {
+      navigate(`/#${targetId}`);
+      return;
+    }
     
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
@@ -83,28 +91,59 @@ const Header = () => {
     }`}>
       <div className="w-full px-4 sm:px-6 md:px-8 py-1 flex items-center justify-between">
         <div className="flex items-center ml-4 sm:ml-8 md:ml-24">
-          <Link 
-            to="/" 
-            className="text-white hover:text-[#f4a82e] transition-colors"
-            aria-label="Go to Test Society home page"
-          >
-            <img src="/images/Logo_Pequeno.png" alt="Test Society 2025" className="h-10 sm:h-12 md:h-16" />
-          </Link>
+          {isHomePage ? (
+            <a 
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="text-white hover:text-[#f4a82e] transition-colors"
+              aria-label="Scroll to top of Test Society home page"
+            >
+              <img src="/images/Logo_Pequeno.png" alt="Test Society 2025" className="h-10 sm:h-12 md:h-16" />
+            </a>
+          ) : (
+            <a 
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="text-white hover:text-[#f4a82e] transition-colors"
+              aria-label="Go to Test Society home page"
+            >
+              <img src="/images/Logo_Pequeno.png" alt="Test Society 2025" className="h-10 sm:h-12 md:h-16" />
+            </a>
+          )}
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
-          {menuItems.map((item) => (
-            <div key={item.href}>
-              {renderMenuItem(item)}
-            </div>
-          ))}
-          <Button 
-            className="bg-teal-800 hover:bg-teal-700 text-white ml-2 lg:ml-4 px-4 lg:px-6 py-2 rounded-md font-semibold text-base lg:text-lg transition-colors"
-            asChild
-          >
-            <a href="#tickets" onClick={scrollToSection} aria-label="Go to Tickets section">Buy Tickets</a>
-          </Button>
+          {isGalleryPage ? (
+            <Button 
+              className="bg-teal-800 hover:bg-teal-700 text-white px-4 lg:px-6 py-2 rounded-md font-semibold text-base lg:text-lg transition-colors flex items-center gap-2"
+              onClick={() => navigate('/')}
+            >
+              <ArrowLeft className="h-5 w-5" />
+              Back to Conference
+            </Button>
+          ) : (
+            <>
+              {menuItems.map((item) => (
+                <div key={item.href}>
+                  {renderMenuItem(item)}
+                </div>
+              ))}
+              <Button 
+                className="bg-teal-800 hover:bg-teal-700 text-white ml-2 lg:ml-4 px-4 lg:px-6 py-2 rounded-md font-semibold text-base lg:text-lg transition-colors"
+                asChild
+              >
+                <a href="#tickets" onClick={scrollToSection} aria-label="Go to Tickets section">Buy Tickets</a>
+              </Button>
+            </>
+          )}
         </nav>
 
         {/* Mobile menu button */}
@@ -125,17 +164,32 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-black/90 backdrop-blur-sm p-4 sm:p-6">
           <nav className="flex flex-col space-y-2 sm:space-y-4">
-            {menuItems.map((item) => (
-              <div key={item.href}>
-                {renderMenuItem(item)}
-              </div>
-            ))}
-            <Button 
-              className="bg-teal-800 hover:bg-teal-700 text-white w-full py-2 sm:py-3 rounded-md font-semibold text-base sm:text-lg transition-colors mt-2"
-              asChild
-            >
-              <a href="#tickets" onClick={scrollToSection} aria-label="Go to Tickets section">Register Now</a>
-            </Button>
+            {isGalleryPage ? (
+              <Button 
+                className="bg-teal-800 hover:bg-teal-700 text-white w-full py-2 sm:py-3 rounded-md font-semibold text-base sm:text-lg transition-colors flex items-center justify-center gap-2"
+                onClick={() => {
+                  navigate('/');
+                  setIsMenuOpen(false);
+                }}
+              >
+                <ArrowLeft className="h-5 w-5" />
+                Back to Conference
+              </Button>
+            ) : (
+              <>
+                {menuItems.map((item) => (
+                  <div key={item.href}>
+                    {renderMenuItem(item)}
+                  </div>
+                ))}
+                <Button 
+                  className="bg-teal-800 hover:bg-teal-700 text-white w-full py-2 sm:py-3 rounded-md font-semibold text-base sm:text-lg transition-colors mt-2"
+                  asChild
+                >
+                  <a href="#tickets" onClick={scrollToSection} aria-label="Go to Tickets section">Register Now</a>
+                </Button>
+              </>
+            )}
           </nav>
         </div>
       )}

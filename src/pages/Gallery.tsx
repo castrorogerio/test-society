@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SectionHeading from "../components/SectionHeading";
@@ -9,30 +9,44 @@ const Gallery = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const galleryImages = [
-    {
-      src: "/gallery/IMG_6877.jpg",
-      thumbnail: "/gallery/thumbnails/IMG_6877.jpg"
-    },
-    {
-      src: "/gallery/IMG_6890.jpg",
-      thumbnail: "/gallery/thumbnails/IMG_6890.jpg"
-    },
-    {
-      src: "/gallery/IMG_6925.jpg",
-      thumbnail: "/gallery/thumbnails/IMG_6925.jpg"
-    },
-    {
-      src: "/gallery/IMG_6928.jpg",
-      thumbnail: "/gallery/thumbnails/IMG_6928.jpg"
-    },
-    {
-      src: "/gallery/IMG_6933.jpg",
-      thumbnail: "/gallery/thumbnails/IMG_6933.jpg"
-    },
-    {
-      src: "/gallery/IMG_6944.jpg",
-      thumbnail: "/gallery/thumbnails/IMG_6944.jpg"
-    }
+    { src: "/gallery/1.jpg", thumbnail: "/gallery/thumbnails/1.jpg" },
+    { src: "/gallery/2.jpg", thumbnail: "/gallery/thumbnails/2.jpg" },
+    { src: "/gallery/3.jpg", thumbnail: "/gallery/thumbnails/3.jpg" },
+    { src: "/gallery/4.jpg", thumbnail: "/gallery/thumbnails/4.jpg" },
+    { src: "/gallery/5.jpg", thumbnail: "/gallery/thumbnails/5.jpg" },
+    { src: "/gallery/6.jpg", thumbnail: "/gallery/thumbnails/6.jpg" },
+    { src: "/gallery/7.jpg", thumbnail: "/gallery/thumbnails/7.jpg" },
+    { src: "/gallery/8.jpg", thumbnail: "/gallery/thumbnails/8.jpg" },
+    { src: "/gallery/9.jpg", thumbnail: "/gallery/thumbnails/9.jpg" },
+    { src: "/gallery/10.jpg", thumbnail: "/gallery/thumbnails/10.jpg" },
+    { src: "/gallery/11.jpg", thumbnail: "/gallery/thumbnails/11.jpg" },
+    { src: "/gallery/12.jpg", thumbnail: "/gallery/thumbnails/12.jpg" },
+    { src: "/gallery/13.jpg", thumbnail: "/gallery/thumbnails/13.jpg" },
+    { src: "/gallery/14.jpg", thumbnail: "/gallery/thumbnails/14.jpg" },
+    { src: "/gallery/15.jpg", thumbnail: "/gallery/thumbnails/15.jpg" },
+    { src: "/gallery/17.jpg", thumbnail: "/gallery/thumbnails/17.jpg" },
+    { src: "/gallery/18.jpg", thumbnail: "/gallery/thumbnails/18.jpg" },
+    { src: "/gallery/21.jpg", thumbnail: "/gallery/thumbnails/21.jpg" },
+    { src: "/gallery/24.jpg", thumbnail: "/gallery/thumbnails/24.jpg" },
+    { src: "/gallery/25.jpg", thumbnail: "/gallery/thumbnails/25.jpg" },
+    { src: "/gallery/26.jpg", thumbnail: "/gallery/thumbnails/26.jpg" },
+    { src: "/gallery/27.jpg", thumbnail: "/gallery/thumbnails/27.jpg" },
+    { src: "/gallery/28.jpg", thumbnail: "/gallery/thumbnails/28.jpg" },
+    { src: "/gallery/29.jpg", thumbnail: "/gallery/thumbnails/29.jpg" },
+    { src: "/gallery/30.jpg", thumbnail: "/gallery/thumbnails/30.jpg" },
+    { src: "/gallery/31.jpg", thumbnail: "/gallery/thumbnails/31.jpg" },
+    { src: "/gallery/32.jpg", thumbnail: "/gallery/thumbnails/32.jpg" },
+    { src: "/gallery/33.jpg", thumbnail: "/gallery/thumbnails/33.jpg" },
+    { src: "/gallery/34.jpg", thumbnail: "/gallery/thumbnails/34.jpg" },
+    { src: "/gallery/35.jpg", thumbnail: "/gallery/thumbnails/35.jpg" },
+    { src: "/gallery/36.jpg", thumbnail: "/gallery/thumbnails/36.jpg" },
+    { src: "/gallery/37.jpg", thumbnail: "/gallery/thumbnails/37.jpg" },
+    { src: "/gallery/38.jpg", thumbnail: "/gallery/thumbnails/38.jpg" },
+    { src: "/gallery/39.jpg", thumbnail: "/gallery/thumbnails/39.jpg" },
+    { src: "/gallery/40.jpg", thumbnail: "/gallery/thumbnails/40.jpg" },
+    { src: "/gallery/41.jpg", thumbnail: "/gallery/thumbnails/41.jpg" },
+    { src: "/gallery/42.jpg", thumbnail: "/gallery/thumbnails/42.jpg" },
+    { src: "/gallery/43.jpg", thumbnail: "/gallery/thumbnails/43.jpg" }
   ];
 
   const handleImageLoad = () => {
@@ -48,6 +62,28 @@ const Gallery = () => {
     setSelectedImage(null);
     document.body.style.overflow = 'auto';
   };
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [selectedImage]);
+
+  // Add ESC key handler
+  useEffect(() => {
+    const handleEscKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && selectedImage) {
+        setSelectedImage(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscKey);
+    return () => {
+      window.removeEventListener('keydown', handleEscKey);
+    };
+  }, [selectedImage]);
 
   return (
     <div className="min-h-screen">
