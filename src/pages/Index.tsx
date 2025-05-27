@@ -19,43 +19,43 @@ const Index = () => {
   const speakers = [
     { 
       id: 1, 
-      name: "TBD", 
-      role: "Speaker", 
-      topic: "To Be Announced",
-      image: "placeholder" 
+      name: "João Proença", 
+      job: "Quality Assurance Manager",
+      topic: "Limitless Within Our Boundaries",
+      image: "speakers/joao_proenca.jpeg" 
     },
     { 
       id: 2, 
-      name: "TBD", 
-      role: "Speaker", 
-      topic: "To Be Announced",
-      image: "placeholder" 
+      name: "Joana Silva", 
+      job: "Quality Assurance Manager",
+      topic: "Unlocking Quality Excellence: Is Your Organization Truly Embracing a Quality Culture?",
+      image: "speakers/joana_silva.jpg" 
     },
     { 
       id: 3, 
-      name: "TBD", 
-      role: "Speaker", 
+      name: "TBA", 
+      job: "",
       topic: "To Be Announced",
       image: "placeholder" 
     },
     { 
       id: 4, 
-      name: "TBD", 
-      role: "Speaker", 
+      name: "TBA", 
+      job: "",
       topic: "To Be Announced",
       image: "placeholder" 
     },
     { 
       id: 5, 
-      name: "TBD", 
-      role: "Speaker", 
+      name: "TBA", 
+      job: "",
       topic: "To Be Announced",
       image: "placeholder" 
     },
     { 
       id: 6, 
-      name: "TBD", 
-      role: "Speaker", 
+      name: "TBA", 
+      job: "",
       topic: "To Be Announced",
       image: "placeholder" 
     }
@@ -204,11 +204,11 @@ const Index = () => {
             </div>
           </div>
           <Button 
-            className="bg-teal-800 hover:bg-teal-700 text-white text-lg px-12 py-4 mt-12 uppercase tracking-wide font-bold rounded-md font-montserrat" 
+            className="bg-teal-800 hover:bg-teal-700 text-white text-lg px-12 py-4 mt-12 uppercase tracking-wide font-bold rounded-md font-montserrat transition-colors opacity-70" 
             size="lg"
-            asChild
+            aria-label="Tickets will be available soon"
           >
-            <a href="#register" aria-label="Register for Test Society 2025 Conference">GRAB YOUR SEAT NOW</a>
+            Tickets will be available soon
           </Button>
         </div>
       </section>
@@ -267,14 +267,14 @@ const Index = () => {
             subtitle="Learn from industry experts and thought leaders"
             textColor="text-[#f4a82e]"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-3 gap-6 justify-center items-start">
             {speakers.map((speaker) => (
               <Speaker 
                 key={speaker.id}
                 name={speaker.name}
-                role={speaker.role}
                 topic={speaker.topic}
                 image={speaker.image}
+                job={speaker.job}
               />
             ))}
           </div>
@@ -384,105 +384,109 @@ const Index = () => {
       {/* Ticket Section */}
       <section 
         id="tickets"
-        className="py-12 relative shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.8),0_20px_50px_-15px_rgba(0,0,0,0.8)] overflow-hidden" 
+        className="py-12 relative overflow-hidden" 
         style={{ 
           background: 'linear-gradient(135deg, #18403e 0%, #1a4a47 50%, #1c5451 100%)'
         }}
       >
-        <div 
-          className="absolute w-[600px] h-[600px] rounded-full bg-[#f4a82e] opacity-20 blur-3xl transition-transform duration-300 ease-out"
-          style={{
-            transform: 'translate(var(--mouse-x, 0), var(--mouse-y, 0))',
-            right: '0',
-            top: '50%',
-            translate: '0 -50%'
-          }}
-        ></div>
-        <div className="container mx-auto px-4 pt-8 pb-8 relative z-10">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#f4a82e]/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#f4a82e]/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <SectionHeading
-              title="Get Your Tickets"
-              subtitle="Choose the best option for you"
+              title="Get Your Ticket"
+              subtitle="Join us for an unforgettable experience"
               textColor="text-[#f4a82e]"
               align="center"
             />
             
-            <div className="grid md:grid-cols-2 gap-8 mt-12">
-              {/* Single Ticket */}
-              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-[#f4a82e] mb-2">Single Ticket</h3>
-                  <div className="flex items-center justify-center gap-2 mb-6">
-                    <span className="text-4xl font-bold text-[#f4a82e]">45€</span>
-                    <span className="text-white/70">per ticket</span>
+            <div className="mt-8">
+              {/* Ticket Card */}
+              <div className="bg-gradient-to-br from-black/40 to-black/60 backdrop-blur-sm rounded-3xl p-12 border-2 border-[#f4a82e] relative max-w-4xl mx-auto shadow-2xl hover:shadow-[#f4a82e]/20 transition-all duration-300">
+                {/* Limited Time Offer Badge */}
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="relative">
+                    <div className="absolute -inset-1 bg-[#FF4D4D] rounded-lg blur opacity-75"></div>
+                    <div className="relative bg-[#FF4D4D] px-6 py-1.5 rounded-lg">
+                      <span className="text-white font-bold tracking-wider text-lg">LIMITED TIME OFFER</span>
+                    </div>
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    <li className="flex items-center gap-2 text-white">
-                      <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Access to all sessions
-                    </li>
-                    <li className="flex items-center gap-2 text-white">
-                      <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Lunch and coffee breaks
-                    </li>
-                    <li className="flex items-center gap-2 text-white">
-                      <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Networking opportunities
-                    </li>
-                  </ul>
+                </div>
+                <div className="relative">
+                  {/* Header */}
+                  <div className="text-center mb-8">
+                    <h3 className="text-4xl font-bold text-white mb-4 tracking-wide">EARLY BIRD OFFER</h3>
+                    <div className="flex flex-col items-center justify-center gap-6">
+                      <span className="text-5xl font-bold text-[#f4a82e]">40€</span>
+                    </div>
+                  </div>
+
+                  {/* Features */}
+                  <div className="grid grid-cols-2 gap-4 mb-8">
+                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
+                      <div className="w-10 h-10 rounded-full bg-[#f4a82e]/20 flex items-center justify-center group-hover:bg-[#f4a82e]/30 transition-colors">
+                        <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">Full Conference Access</h4>
+                        <p className="text-white/70 text-sm">Access to all sessions</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
+                      <div className="w-10 h-10 rounded-full bg-[#f4a82e]/20 flex items-center justify-center group-hover:bg-[#f4a82e]/30 transition-colors">
+                        <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">Premium Networking</h4>
+                        <p className="text-white/70 text-sm">Connect with leaders</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
+                      <div className="w-10 h-10 rounded-full bg-[#f4a82e]/20 flex items-center justify-center group-hover:bg-[#f4a82e]/30 transition-colors">
+                        <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">Refreshments</h4>
+                        <p className="text-white/70 text-sm">Lunch & coffee breaks</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
+                      <div className="w-10 h-10 rounded-full bg-[#f4a82e]/20 flex items-center justify-center group-hover:bg-[#f4a82e]/30 transition-colors">
+                        <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold">Vibrant Community</h4>
+                        <p className="text-white/70 text-sm">Share your knowledge and learn from others</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <Button 
+                    className="w-full bg-gradient-to-r from-[#f4a82e] to-[#f4a82e]/90 hover:from-[#f4a82e]/90 hover:to-[#f4a82e] text-black text-lg py-4 uppercase tracking-wide font-bold rounded-xl font-montserrat shadow-lg hover:shadow-[#f4a82e]/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    size="lg"
+                    disabled
+                    aria-label="Ticket sales coming soon"
+                  >
+                    Tickets on Sale Soon
+                  </Button>
                 </div>
               </div>
-
-              {/* Group Ticket */}
-              <div className="bg-black/30 backdrop-blur-sm rounded-xl p-8 border-2 border-[#f4a82e] relative transform scale-105">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#f4a82e] text-black px-4 py-1 rounded-full text-sm font-bold">
-                  BEST VALUE
-                </div>
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-[#f4a82e] mb-2">Group Ticket</h3>
-                  <div className="flex items-center justify-center gap-2 mb-6">
-                    <span className="text-4xl font-bold text-[#f4a82e]">40€</span>
-                    <span className="text-white/70">per ticket (min. 3)</span>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    <li className="flex items-center gap-2 text-white">
-                      <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      All Single Ticket benefits
-                    </li>
-                    <li className="flex items-center gap-2 text-white">
-                      <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Save 10% per ticket
-                    </li>
-                    <li className="flex items-center gap-2 text-white">
-                      <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                      </svg>
-                      Priority seating
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Add single buy button below cards */}
-            <div className="mt-12 text-center">
-              <Button 
-                className="bg-[#f4a82e] hover:bg-[#f4a82e]/90 text-black text-lg px-12 py-4 uppercase tracking-wide font-bold rounded-md font-montserrat"
-                size="lg"
-                aria-label="Purchase tickets for Test Society 2025 Conference"
-              >
-                Purchase Tickets Now
-              </Button>
             </div>
           </div>
         </div>
@@ -528,7 +532,7 @@ const Index = () => {
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Date & Time</h3>
                     <p className="text-white/80">October 10th, 2025</p>
-                    <p className="text-white/80">8:30 AM - 6:00 PM</p>
+                    {/* <p className="text-white/80">8:30 AM - 6:00 PM</p> */}
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -539,8 +543,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Contact</h3>
-                    <p className="text-white/80">+351 21 000 0000</p>
-                    <p className="text-white/80">info@testsociety2025.com</p>
+                    <p className="text-white/80">testsocietyconf@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -682,19 +685,19 @@ const Index = () => {
             <div className="space-y-8">
               <div className="bg-black/30 p-8 rounded-xl border border-teal-800/30">
                 <blockquote className="text-white text-lg md:text-xl italic mb-6">
-                  "The Test Society conference was a game-changer for our QA team. The insights we gained from the speakers and workshops have transformed our approach to testing and significantly improved our product quality."
+                  "The Test Society conference was a pleasant surprise. The speakers and the topics covered throughout the day were diverse and engaging. It was also a great opportunity for networking with colleagues from various fields and backgrounds. Overall, it was an enriching experience."
                 </blockquote>
                 <div className="flex items-center">
                   <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
-                      alt="John Smith" 
+                      src="testemonials/estela_ferreira.png" 
+                      alt="Estela Ferreira" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
-                    <p className="text-white font-semibold">John Smith</p>
-                    <p className="text-[#f4a82e]">QA Director, TechCorp Inc.</p>
+                    <p className="text-white font-semibold">Estela Ferreira</p>
+                    <p className="text-[#f4a82e]">Quality Assurance Analyst, Blip.pt</p>
                   </div>
                 </div>
               </div>
@@ -706,14 +709,14 @@ const Index = () => {
                 <div className="flex items-center">
                   <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3" 
-                      alt="Sarah Johnson" 
+                      src="testemonials/joao_castro.png" 
+                      alt="João Castro" 
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
-                    <p className="text-white font-semibold">Sarah Johnson</p>
-                    <p className="text-[#f4a82e]">Senior QA Engineer, InnovateTech</p>
+                    <p className="text-white font-semibold">João Castro</p>
+                    <p className="text-[#f4a82e]">Senior QA Engineer, LetsGetChecked</p>
                   </div>
                 </div>
               </div>

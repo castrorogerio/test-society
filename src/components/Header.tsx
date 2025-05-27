@@ -103,7 +103,7 @@ const Header = () => {
             className="bg-teal-800 hover:bg-teal-700 text-white ml-2 lg:ml-4 px-4 lg:px-6 py-2 rounded-md font-semibold text-base lg:text-lg transition-colors"
             asChild
           >
-            <a href="#tickets" onClick={scrollToSection} aria-label="Go to Tickets section">Register Now</a>
+            <a href="#tickets" onClick={scrollToSection} aria-label="Go to Tickets section">Buy Tickets</a>
           </Button>
         </nav>
 

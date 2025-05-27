@@ -24,8 +24,8 @@ const App = () => (
       <Sonner />
       <Router future={router.future}>
         <Routes>
-          <Route path="/" element={<ComingSoon />} />
-          <Route path="/conference" element={<Index />} />
+          <Route path="/" element={<Index />} />
+          {/* <Route path="/conference" element={<Index />} /> */}
           <Route path="/gallery" element={<Gallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

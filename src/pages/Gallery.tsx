@@ -50,14 +50,27 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
+      <div 
+        className="fixed inset-0 -z-10"
+        style={{ 
+          backgroundImage: "url('/images/Speakers_BG.png')",
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          transform: 'translate3d(0,0,0)',
+          willChange: 'transform'
+        }}
+      />
+      <div className="fixed inset-0 -z-10 bg-black/60" />
       <Header />
       
       <main>
         {/* Hero Section */}
         <section className="relative py-16 sm:py-24 md:py-32">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
-          <div className="absolute inset-0 bg-[url('./gallery/hero.jpg')] bg-cover bg-center"></div>
+          <div className="absolute inset-0"></div>
+          <div className="absolute inset-0"></div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <SectionHeading
               title="Event Gallery"
