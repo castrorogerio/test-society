@@ -20,14 +20,14 @@ const Index = () => {
     { 
       id: 1, 
       name: "João Proença", 
-      job: "Quality Assurance Manager",
+      job: "Expert Quality Engineer / International Speaker",
       topic: "Limitless Within Our Boundaries",
       image: "speakers/joao_proenca.jpeg" 
     },
     { 
       id: 2, 
       name: "Joana Silva", 
-      job: "Quality Assurance Manager",
+      job: "Director of Quality Assurance | Quality Advocate | Mentor",
       topic: "Unlocking Quality Excellence: Is Your Organization Truly Embracing a Quality Culture?",
       image: "speakers/joana_silva.jpg" 
     },
