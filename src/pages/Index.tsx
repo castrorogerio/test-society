@@ -384,7 +384,7 @@ const Index = () => {
       {/* Ticket Section */}
       <section 
         id="tickets"
-        className="py-12 relative overflow-hidden" 
+        className="py-12 relative overflow-hidden shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.8),0_20px_50px_-15px_rgba(0,0,0,0.8)]" 
         style={{ 
           background: 'linear-gradient(135deg, #18403e 0%, #1a4a47 50%, #1c5451 100%)'
         }}

@@ -2,17 +2,25 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white py-12 px-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-[#f4a82e] text-xl font-bold mb-4 font-montserrat">TEST SOCIETY 2025</h3>
+            <h3 className="text-[#f4a82e] text-xl font-bold mb-4 font-montserrat">TEST SOCIETY</h3>
             <p className="text-gray-300">Quality Assurance Conference</p>
             <p className="text-gray-300 mt-2">Lisbon, Portugal</p>
             <p className="text-gray-300">October 10th 2025</p>
           </div>
+
+          <div className="flex items-center justify-center">
+            <img 
+              src="/images/Logo_Pequeno.png" 
+              alt="Test Society Logo" 
+              className="h-16 w-auto mb-4"
+            />
+          </div>
           
           <div className="md:flex md:justify-end">
             <div>
-              <h3 className="text-amber-DEFAULT text-xl font-bold mb-4">Contact Us</h3>
+              <h3 className="text-[#f4a82e] text-xl font-bold mb-4">Contact Us</h3>
               <p className="text-gray-300">Email: testsocietyconf@gmail.com</p>
               <div className="flex space-x-4 mt-4">
               <a
@@ -43,7 +51,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">© 2025 Test Society Conference. All rights reserved.</p>
+          <p className="text-gray-400">© Test Society Conference. All rights reserved.</p>
         </div>
       </div>
     </footer>
