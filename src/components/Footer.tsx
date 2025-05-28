@@ -12,9 +12,9 @@ const Footer = () => {
 
           <div className="flex items-center justify-center">
             <img 
-              src="/images/Logo_Pequeno.png" 
+              src="/images/Logo_grande.png"
               alt="Test Society Logo" 
-              className="h-16 w-auto mb-4"
+              className="h-40 w-auto"
             />
           </div>
           
