@@ -20,38 +20,39 @@ const Index = () => {
     { 
       id: 1, 
       name: "João Proença", 
-      job: "Expert Quality Engineer / International Speaker",
+      job: "Expert Quality Engineer @ Ada Health",
       topic: "Limitless Within Our Boundaries",
       image: "speakers/joao_proenca.jpeg" 
     },
     { 
       id: 2, 
-      name: "Joana Silva", 
-      job: "Director of Quality Assurance | Quality Advocate | Mentor",
-      topic: "Unlocking Quality Excellence: Is Your Organization Truly Embracing a Quality Culture?",
-      image: "speakers/joana_silva.jpg" 
+      name: "Anastasiia Chudovska", 
+      job: "Senior QA Lead @ Intellias",
+      topic: "From Monolith to Microservices: A QA Lead Survival Guide",
+      image: "speakers/anastasiia_chudovska.jpg" 
     },
     { 
       id: 3, 
-      name: "TBA", 
-      job: "",
-      topic: "To Be Announced",
-      image: "placeholder" 
-    },
+      name: "Marco Pinho", 
+      job: "Director Quality Assurance @ Diconium",
+      topic: "Dances of the Test Manager: Mastering the QA Dancefloor",
+      image: "speakers/marco_pinho.jpg" 
+    }, 
     { 
       id: 4, 
-      name: "TBA", 
-      job: "",
-      topic: "To Be Announced",
-      image: "placeholder" 
+      name: "Rita Castro", 
+      job: "Software Developer @ Volkswagen Digital Solutions",
+      topic: "ToDo: Test Driven Development and Accessibility (and React)",
+      image: "speakers/rita-castro.png" 
     },
     { 
       id: 5, 
-      name: "TBA", 
-      job: "",
-      topic: "To Be Announced",
-      image: "placeholder" 
+      name: "Joana Silva", 
+      job: "Director of Quality Assurance @ Broadvoice",
+      topic: "Unlocking Quality Excellence: Is Your Organization Truly Embracing a Quality Culture?",
+      image: "speakers/joana_silva.jpg" 
     },
+    
     { 
       id: 6, 
       name: "TBA", 
