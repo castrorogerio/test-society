@@ -6,7 +6,9 @@ import Sponsor from "../components/Sponsor";
 import EventScheduleItem from "../components/EventScheduleItem";
 import Countdown from "../components/Countdown";
 import ScrollToTop from "../components/ScrollToTop";
+import TicketModal from "../components/TicketModal";
 import { Button } from "../components/ui/button";
+import { useState } from "react";
 
 type Sponsor = {
   id: number;
@@ -15,6 +17,7 @@ type Sponsor = {
 };
 
 const Index = () => {
+  const [isTicketModalOpen, setIsTicketModalOpen] = useState(false);
   // Sample data
   const speakers = [
     { 
@@ -205,11 +208,23 @@ const Index = () => {
             </div>
           </div>
           <Button 
-            className="bg-teal-800 hover:bg-teal-700 text-white text-lg px-12 py-4 mt-12 uppercase tracking-wide font-bold rounded-md font-montserrat transition-colors opacity-70" 
+            className="bg-teal-800 hover:bg-teal-700 text-white text-lg px-12 py-4 mt-12 uppercase tracking-wide font-bold rounded-md font-montserrat transition-colors" 
             size="lg"
-            aria-label="Tickets will be available soon"
+            onClick={(e) => {
+              e.preventDefault();
+              const targetElement = document.getElementById('tickets');
+              if (targetElement) {
+                const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+                const targetPosition = targetElement.offsetTop - headerHeight;
+                window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }}
+            aria-label="Go to tickets section"
           >
-            Tickets will be available soon
+            BUY TICKET NOW
           </Button>
         </div>
       </section>
@@ -479,12 +494,12 @@ const Index = () => {
 
                   {/* CTA Button */}
                   <Button 
-                    className="w-full bg-gradient-to-r from-[#f4a82e] to-[#f4a82e]/90 hover:from-[#f4a82e]/90 hover:to-[#f4a82e] text-black text-lg py-4 uppercase tracking-wide font-bold rounded-xl font-montserrat shadow-lg hover:shadow-[#f4a82e]/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full bg-gradient-to-r from-[#f4a82e] to-[#f4a82e]/90 hover:from-[#f4a82e]/90 hover:to-[#f4a82e] text-black text-lg py-4 uppercase tracking-wide font-bold rounded-xl font-montserrat shadow-lg hover:shadow-[#f4a82e]/30 transition-all duration-300"
                     size="lg"
-                    disabled
-                    aria-label="Ticket sales coming soon"
+                    onClick={() => setIsTicketModalOpen(true)}
+                    aria-label="Buy ticket now"
                   >
-                    Tickets on Sale Soon
+                    BUY TICKET NOW
                   </Button>
                 </div>
               </div>
@@ -773,6 +788,10 @@ const Index = () => {
 
       <Footer />
       <ScrollToTop />
+      <TicketModal 
+        isOpen={isTicketModalOpen} 
+        onClose={() => setIsTicketModalOpen(false)} 
+      />
       <script dangerouslySetInnerHTML={{
         __html: `
           document.addEventListener('scroll', () => {

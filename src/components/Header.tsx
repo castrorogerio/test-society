@@ -3,6 +3,8 @@ import { Button } from "./ui/button";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 
+
+
 type MenuItem = {
   href: string;
   label: string;
@@ -140,7 +142,7 @@ const Header = () => {
                 className="bg-teal-800 hover:bg-teal-700 text-white ml-2 lg:ml-4 px-4 lg:px-6 py-2 rounded-md font-semibold text-base lg:text-lg transition-colors"
                 asChild
               >
-                <a href="#tickets" onClick={scrollToSection} aria-label="Go to Tickets section">Buy Tickets</a>
+                <a href="#tickets" onClick={scrollToSection} aria-label="Go to tickets section">BUY TICKET NOW</a>
               </Button>
             </>
           )}
@@ -186,7 +188,7 @@ const Header = () => {
                   className="bg-teal-800 hover:bg-teal-700 text-white w-full py-2 sm:py-3 rounded-md font-semibold text-base sm:text-lg transition-colors mt-2"
                   asChild
                 >
-                  <a href="#tickets" onClick={scrollToSection} aria-label="Go to Tickets section">Register Now</a>
+                  <a href="#tickets" onClick={scrollToSection} aria-label="Go to tickets section">BUY TICKET NOW</a>
                 </Button>
               </>
             )}

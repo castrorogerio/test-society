@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SectionHeading from "../components/SectionHeading";
+import TicketModal from "../components/TicketModal";
 import { Button } from "../components/ui/button";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isTicketModalOpen, setIsTicketModalOpen] = useState(false);
 
   const galleryImages = [
     { src: "/gallery/1.jpg", thumbnail: "/gallery/thumbnails/1.jpg" },
@@ -179,15 +181,19 @@ const Gallery = () => {
             <Button 
               className="bg-teal-800 hover:bg-teal-700 text-white text-base sm:text-lg px-8 sm:px-12 py-3 sm:py-4 mt-6 sm:mt-8 uppercase tracking-wide font-bold rounded-md font-montserrat"
               size="lg"
-              asChild
+              onClick={() => setIsTicketModalOpen(true)}
             >
-              <a href="/#register">GRAB YOUR SEAT NOW</a>
+              BUY TICKET NOW
             </Button>
           </div>
         </section>
       </main>
 
       <Footer />
+      <TicketModal 
+        isOpen={isTicketModalOpen} 
+        onClose={() => setIsTicketModalOpen(false)} 
+      />
     </div>
   );
 };
