@@ -442,8 +442,8 @@ const Index = () => {
                   </div>
 
                   {/* Features */}
-                  <div className="grid grid-cols-2 gap-4 mb-8">
-                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group min-h-[88px]">
                       <div className="w-10 h-10 rounded-full bg-[#f4a82e]/20 flex items-center justify-center group-hover:bg-[#f4a82e]/30 transition-colors">
                         <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
@@ -455,7 +455,7 @@ const Index = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
+                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group min-h-[88px]">
                       <div className="w-10 h-10 rounded-full bg-[#f4a82e]/20 flex items-center justify-center group-hover:bg-[#f4a82e]/30 transition-colors">
                         <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
@@ -467,7 +467,7 @@ const Index = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
+                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group min-h-[88px]">
                       <div className="w-10 h-10 rounded-full bg-[#f4a82e]/20 flex items-center justify-center group-hover:bg-[#f4a82e]/30 transition-colors">
                         <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
@@ -479,13 +479,13 @@ const Index = () => {
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group">
-                      <div className="w-10 h-10 rounded-full bg-[#f4a82e]/20 flex items-center justify-center group-hover:bg-[#f4a82e]/30 transition-colors">
+                    <div className="flex items-center gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group min-h-[88px]">
+                      <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center rounded-full bg-[#f4a82e]/20 group-hover:bg-[#f4a82e]/30 transition-colors">
                         <svg className="w-5 h-5 text-[#f4a82e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <div>
+                      <div className="flex-1 min-w-0">
                         <h4 className="text-white font-semibold">Vibrant Community</h4>
                         <p className="text-white/70 text-sm">Share your knowledge and learn from others</p>
                       </div>
