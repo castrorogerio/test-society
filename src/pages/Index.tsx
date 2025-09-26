@@ -95,51 +95,60 @@ const Index = () => {
 
   const scheduleItems = [
     {
-      time: "08:30 - 09:00",
-      title: "Welcome & Opening Ceremony"
+      time: "09:00 - 09:30",
+      title: "Welcome & Registration"
     },
     {
-      time: "09:00 - 10:00",
-      title: "To Be Announced",
+      time: "09:30 - 10:15",
+      title: "Talk 1",
       speaker: "TBD",
       description: "To Be Announced"
     },
     {
-      time: "10:15 - 11:15",
-      title: "To Be Announced",
+      time: "10:15 - 11:00",
+      title: "Talk 2",
       speaker: "TBD",
       description: "To Be Announced"
     },
     {
-      time: "11:30 - 12:30",
-      title: "To Be Announced",
+      time: "11:00 - 11:30",
+      title: "Coffee Break"
+    },
+    {
+      time: "11:30 - 12:15",
+      title: "Talk 3",
+      speaker: "TBD",
+      description: "To Be Announced"
+    },
+    ,
+    {
+      time: "12:15 - 13:00",
+      title: "Talk 4",
       speaker: "TBD",
       description: "To Be Announced"
     },
     {
-      time: "12:30 - 14:00",
+      time: "13:00 - 14:00",
       title: "Lunch Break & Networking"
     },
     {
-      time: "14:00 - 15:00",
-      title: "To Be Announced",
+      time: "14:00 - 14:45",
+      title: "Talk 5",
       speaker: "TBD",
       description: "To Be Announced"
     },
     {
-      time: "15:15 - 16:15",
-      title: "To Be Announced",
+      time: "14:45 - 15:15",
+      title: "Coffee Break"
+    },
+    {
+      time: "15:15 - 16:30",
+      title: "Talk 6",
       speaker: "TBD",
       description: "To Be Announced"
     },
     {
-      time: "16:30 - 17:30",
-      title: "To Be Announced",
-      speaker: "TBD",
-      description: "To Be Announced"
-    },
-    {
-      time: "17:30 - 18:00",
+      time: "16:30 - 17:00",
       title: "Closing Ceremony & Networking"
     }
   ];
@@ -367,7 +376,7 @@ const Index = () => {
             textColor="text-[#f4a82e]"
           />
 
-          {/* Schedule section temporarily commented out
+          {/* Schedule section temporarily commented out */}
           <div className="max-w-4xl mx-auto bg-black/50 backdrop-blur-sm rounded-2xl p-6">
             {scheduleItems.map((item, index) => (
               <EventScheduleItem
@@ -379,7 +388,7 @@ const Index = () => {
               />
             ))}
           </div>
-          */}
+          }
           <div className="max-w-4xl mx-auto bg-black/50 backdrop-blur-sm rounded-2xl p-6 text-center">
             <h2 className="text-2xl font-bold text-white">Schedule Coming Soon</h2>
             <p className="text-gray-300 mt-2">Stay tuned for our exciting event schedule!</p>

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Countdown from "../components/Countdown";
 
 const ComingSoon = () => {
 
@@ -29,9 +28,44 @@ const ComingSoon = () => {
             QUALITY ASSURANCE CONFERENCE
           </p>
 
-          {/* Countdown */}
-          <div className="mb-8 sm:mb-16">
-            <Countdown />
+          {/* Event Cancellation Notice */}
+          <div className="mb-8 sm:mb-16 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-black/60 to-black/40 backdrop-blur-sm rounded-3xl p-8 sm:p-12 border-2 border-[#f4a82e]/30 relative overflow-hidden shadow-2xl hover:shadow-[#f4a82e]/20 transition-all duration-300">
+              {/* Background decorative elements */}
+              <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#f4a82e]/10 rounded-full blur-2xl"></div>
+              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-[#f4a82e]/10 rounded-full blur-2xl"></div>
+              
+              <div className="relative z-10 text-center">
+                {/* Icon */}
+                <div className="flex justify-center mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#f4a82e] to-[#f4a82e]/80 rounded-full flex items-center justify-center shadow-lg">
+                    <svg className="w-10 h-10 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                    </svg>
+                  </div>
+                </div>
+                
+                {/* Title */}
+                <h2 className="text-[#f4a82e] text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-wider">
+                  EVENT CANCELLED
+                </h2>
+                
+                {/* Main message */}
+                <p className="text-white text-lg sm:text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
+                  We regret to inform you that this year's Test Society 2025 event has been cancelled due to insufficient ticket sales.
+                </p>
+                
+                {/* Future message */}
+                <div className="bg-gradient-to-r from-[#f4a82e]/20 to-[#f4a82e]/10 rounded-2xl p-6 border border-[#f4a82e]/30">
+                  <p className="text-[#f4a82e] text-xl sm:text-2xl md:text-3xl font-semibold mb-2">
+                    We will be returning next year!
+                  </p>
+                  <p className="text-white/90 text-lg sm:text-xl">
+                    Stay tuned for an even better event in 2026
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Event Details */}
