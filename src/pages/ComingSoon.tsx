@@ -55,45 +55,6 @@ const ComingSoon = () => {
                   We regret to inform you that this year's Test Society 2025 event has been cancelled due to insufficient ticket sales.
                 </p>
                 
-                {/* Future message */}
-                <div className="bg-gradient-to-r from-[#f4a82e]/20 to-[#f4a82e]/10 rounded-2xl p-6 border border-[#f4a82e]/30">
-                  <p className="text-[#f4a82e] text-xl sm:text-2xl md:text-3xl font-semibold mb-2">
-                    We will be returning next year!
-                  </p>
-                  <p className="text-white/90 text-lg sm:text-xl">
-                    Stay tuned for an even better event in 2026
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Event Details */}
-          <div className="max-w-2xl mx-auto mb-8 sm:mb-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8 text-white">
-              <div className="flex items-center justify-center p-2 sm:p-4">
-                <span className="text-[#f4a82e] mr-2 sm:mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-8 sm:h-8">
-                    <path fillRule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z" clipRule="evenodd" />
-                  </svg>
-                </span>
-                <span className="font-semibold text-sm sm:text-base">October 10th 2025</span>
-              </div>
-              <div className="flex items-center justify-center p-2 sm:p-4">
-                <span className="text-[#f4a82e] mr-2 sm:mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-8 sm:h-8">
-                    <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-                  </svg>
-                </span>
-                <span className="font-semibold text-sm sm:text-base">Lisbon, Portugal</span>
-              </div>
-              <div className="flex items-center justify-center p-2 sm:p-4">
-                <span className="text-[#f4a82e] mr-2 sm:mr-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-8 sm:h-8">
-                    <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
-                  </svg>
-                </span>
-                <span className="font-semibold text-sm sm:text-base">6 Speakers</span>
               </div>
             </div>
           </div>
