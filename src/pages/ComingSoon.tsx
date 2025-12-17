@@ -52,7 +52,11 @@ const ComingSoon = () => {
                 
                 {/* Main message */}
                 <p className="text-white text-lg sm:text-xl md:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
-                  We regret to inform you that this year's Test Society 2025 event has been cancelled due to insufficient ticket sales.
+                  The TestSociety Organizing Committee has made the difficult decision to pause the annual TestSociety Conference for the foreseeable future.
+                  <br /><br />
+                  We sincerely thank our speakers, sponsors, and attendees for their support over the years.
+                  <br /><br />
+                  We look forward to connecting with you soon!
                 </p>
                 
               </div>
